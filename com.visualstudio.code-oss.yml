@@ -85,7 +85,12 @@ modules:
           .extensionsGallery.serviceUrl="https://open-vsx.org/vscode/gallery" |
           .extensionsGallery.itemUrl="https://open-vsx.org/vscode/item" |
           .linkProtectionTrustedDomains=["https://open-vsx.org"] |
-          .extensionAllowedProposedApi+=["ms-vsliveshare.vsliveshare"] |
+          .extensionAllowedProposedApi+=[
+            "github.vscode-pull-request-github",
+            "ms-python.python",
+            "ms-vscode.js-debug",
+            "ms-vsliveshare.vsliveshare"
+          ] |
           .builtInExtensions=[]
         ' < product.orig.json > product.json
         rm product.orig.json
