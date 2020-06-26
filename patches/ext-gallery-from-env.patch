@@ -1,5 +1,5 @@
 diff --git a/src/vs/platform/product/common/product.ts b/src/vs/platform/product/common/product.ts
-index c413616e47..3e772d6881 100644
+index c413616e47..aad6724fd2 100644
 --- a/src/vs/platform/product/common/product.ts
 +++ b/src/vs/platform/product/common/product.ts
 @@ -46,6 +46,15 @@ else if (typeof require !== 'undefined' && typeof require.__$__nodeRequire === '
@@ -8,7 +8,7 @@ index c413616e47..3e772d6881 100644
  
 +	// Set user-defined extension gallery
 +	if (env['VSCODE_EXTENSIONS_GALLERY']) {
-+		let gallery: IProductConfiguration['extensionsGallery']
++		let gallery: IProductConfiguration['extensionsGallery'];
 +		gallery = require.__$__nodeRequire(env['VSCODE_EXTENSIONS_GALLERY']);
 +		Object.assign(product, {
 +			extensionsGallery: gallery

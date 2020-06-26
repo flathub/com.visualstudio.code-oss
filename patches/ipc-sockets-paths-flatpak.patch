@@ -20,15 +20,15 @@ index 5cea9faf98..0e4271162b 100644
  
  	return path.join(os.tmpdir(), `vscode-git-${id}.sock`);
 diff --git a/src/vs/platform/environment/node/environmentService.ts b/src/vs/platform/environment/node/environmentService.ts
-index a67032aae3..d527616e5d 100644
+index 283b4b325b..0ffbf4ceaa 100644
 --- a/src/vs/platform/environment/node/environmentService.ts
 +++ b/src/vs/platform/environment/node/environmentService.ts
-@@ -284,7 +284,13 @@ function getNixIPCHandle(userDataPath: string, type: string): string {
+@@ -285,7 +285,13 @@ function getNixIPCHandle(userDataPath: string, type: string): string {
  	let result: string;
  	if (xdgRuntimeDir && !vscodePortable) {
  		const scope = crypto.createHash('md5').update(userDataPath).digest('hex').substr(0, 8);
 -		result = path.join(xdgRuntimeDir, `vscode-${scope}-${product.version}-${type}.sock`);
-+		const socketName = `vscode-${scope}-${product.version}-${type}.sock`
++		const socketName = `vscode-${scope}-${product.version}-${type}.sock`;
 +		const flatpakID = process.env['FLATPAK_ID'];
 +		if (flatpakID) {
 +			result = path.join(xdgRuntimeDir, 'app', flatpakID, socketName);
