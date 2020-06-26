@@ -86,7 +86,7 @@ modules:
           .extensionsGallery.itemUrl="https://open-vsx.org/vscode/item" |
           .linkProtectionTrustedDomains=["https://open-vsx.org"] |
           .extensionAllowedProposedApi+=[
-            "github.vscode-pull-request-github",
+            "GitHub.vscode-pull-request-github",
             "ms-python.python",
             "ms-vscode.js-debug",
             "ms-vsliveshare.vsliveshare"
