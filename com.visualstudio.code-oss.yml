@@ -78,16 +78,16 @@ modules:
       - |
         set -e
         mv product.json product.orig.json
-        jq "
-          .quality=\"${VSCODE_QUALITY}\" |
-          .commit=\"$(git rev-parse HEAD)\" |
-          .date=\"$(date -u +'%FT%TZ')\" |
-          .extensionsGallery.serviceUrl=\"https://open-vsx.org/vscode/gallery\" |
-          .extensionsGallery.itemUrl=\"https://open-vsx.org/vscode/item\" |
-          .linkProtectionTrustedDomains=[\"https://open-vsx.org\"] |
-          .extensionAllowedProposedApi+=[\"ms-vsliveshare.vsliveshare\"] |
+        jq '
+          .quality="'"${VSCODE_QUALITY}"'" |
+          .commit="'"$(git rev-parse HEAD)"'" |
+          .date="'"$(date -u +'%FT%TZ')"'" |
+          .extensionsGallery.serviceUrl="https://open-vsx.org/vscode/gallery" |
+          .extensionsGallery.itemUrl="https://open-vsx.org/vscode/item" |
+          .linkProtectionTrustedDomains=["https://open-vsx.org"] |
+          .extensionAllowedProposedApi+=["ms-vsliveshare.vsliveshare"] |
           .builtInExtensions=[]
-        " < product.orig.json > product.json
+        ' < product.orig.json > product.json
         rm product.orig.json
       # Build
       - yarn --frozen-lockfile
