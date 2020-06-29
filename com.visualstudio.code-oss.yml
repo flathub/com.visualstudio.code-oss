@@ -34,13 +34,17 @@ modules:
 
   - shared-modules/libsecret/libsecret.json
 
-  - name: ImageMagick
+  - name: Pillow
+    buildsystem: simple
+    build-commands:
+      - python3 setup.py build -j${FLATPAK_BUILDER_N_JOBS}
+      - python3 setup.py install --prefix=${FLATPAK_DEST} --root=/
     cleanup:
       - "*"
     sources:
       - type: archive
-        url: "https://github.com/ImageMagick/ImageMagick/archive/7.0.10-14.tar.gz"
-        sha256: f2a60abc60fdc5a9c260d84a261cb3ce2500282b4c15f23ffa503848977ad7d1
+        url: "https://github.com/python-pillow/Pillow/archive/7.1.2.tar.gz"
+        sha256: 0149ff56547ef4ea658c833d7fb5af687a25cccc7ca4de58486578406a4ede27
 
   - name: yarn
     buildsystem: simple
