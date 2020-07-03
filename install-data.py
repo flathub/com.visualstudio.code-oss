@@ -5,6 +5,7 @@ import subprocess
 import json
 import datetime
 from xml.dom import minidom
+from PIL import Image
 
 FLATPAK_ID = os.environ.get('FLATPAK_ID')
 
@@ -36,8 +37,7 @@ def configure_file(product, input_data):
     }
     output = input_data
     for key, value in replacements.items():
-        placeholder = f'@@{key}@@'
-        output = output.replace(placeholder, value)
+        output = output.replace(f'@@{key}@@', value)
     return output
 
 def install_file(product, src_file, dst_file):
@@ -95,14 +95,11 @@ def install_desktop_data(srcdir, datadir):
         product = json.load(p)
     appname = product['applicationName']
 
-    for s in [16, 24, 32, 48, 64, 128, 192, 256, 512]:
-        size = f'{s}x{s}'
-        dest_file = os.path.join(datadir, 'icons', 'hicolor', size, 'apps', f'{appname}.png')
-        os.makedirs(os.path.dirname(dest_file), exist_ok=True)
-        subprocess.run([
-            'magick', 'convert', os.path.join(srcdir, 'resources', 'linux', 'code.png'),
-            '-resize', size, dest_file
-        ], check=True)
+    with Image.open(os.path.join(srcdir, 'resources', 'linux', 'code.png')) as icon:
+        for s in [16, 24, 32, 48, 64, 128, 192, 256, 512]:
+            dest = os.path.join(datadir, 'icons', 'hicolor', f'{s}x{s}', 'apps', f'{appname}.png')
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            icon.resize((s, s), resample=Image.LANCZOS).save(dest)
 
     install_file(product,
                  os.path.join(srcdir, 'resources', 'linux', 'code.desktop'),
