@@ -105,7 +105,6 @@ modules:
       # Install
       - cp -a ../VSCode-linux-$earch /app/main
     post-install:
-      - install -Dm755 ../code-oss.sh /app/bin/code-oss
       - ../install-data.py . /app/share
       - mkdir -p /app/tools
     subdir: main
@@ -129,7 +128,13 @@ modules:
       - generated-sources.json
 
       - type: file
-        path: code-oss.sh
-
-      - type: file
         path: install-data.py
+
+  - name: wrapper
+    buildsystem: meson
+    config-opts:
+      - -Deditor_binary=/app/main/bin/code-oss
+      - -Dprogram_name=code-oss
+    sources:
+      - type: git
+        path: wrapper
