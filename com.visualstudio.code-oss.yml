@@ -65,9 +65,6 @@ modules:
       env:
         TMPDIR: /run/build/vscode/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/vscode/flatpak-node/cache
-        ELECTRON_CACHE: /run/build/vscode/flatpak-node/electron-cache
-        electron_config_cache: /run/build/vscode/flatpak-node/electron-cache
-        npm_config_nodedir: /run/build/vscode/flatpak-node/node-gyp/electron-current
         DEBUG: electron-rebuild,electron-builder
         CHILD_CONCURRENCY: "1"
         VSCODE_QUALITY: stable
@@ -111,8 +108,8 @@ modules:
     sources:
       - type: git
         url: "https://github.com/microsoft/vscode.git"
-        tag: "1.47.2"
-        commit: 17299e413d5590b14ab0340ea477cdd86ff13daf
+        commit: e2de23c683887ce5e89d5a33d3740651dbff5a50
+        branch: master
         dest: main
 
       - type: patch
@@ -126,6 +123,16 @@ modules:
         dest-filename: .yarnrc
 
       - generated-sources.json
+
+      #FIXME remove once flatpak-node-generator.py can handle node headers
+      - type: archive
+        url: "http://nodejs.org/dist/v12.14.1/node-v12.14.1-headers.tar.gz"
+        sha256: 944b436e1e8fe19b0c7397ebd3680abefe81d5958d9341bef99fbe0c9fffa93c
+        dest: flatpak-node/cache/node-gyp/12.14.1
+      - type: file
+        url: data:9
+        dest-filename: installVersion
+        dest: flatpak-node/cache/node-gyp/12.14.1
 
       - type: file
         path: install-data.py
