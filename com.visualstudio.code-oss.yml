@@ -108,8 +108,8 @@ modules:
     sources:
       - type: git
         url: "https://github.com/microsoft/vscode.git"
-        commit: e2de23c683887ce5e89d5a33d3740651dbff5a50
         branch: master
+        commit: e39d21e31896e0855b76595a4a25424659100f3b
         dest: main
 
       - type: patch
