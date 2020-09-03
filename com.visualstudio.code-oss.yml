@@ -133,6 +133,7 @@ modules:
     config-opts:
       - -Deditor_binary=/app/main/bin/code-oss
       - -Dprogram_name=code-oss
+      - -Deditor_title=Visual Studio Code Open Source
     sources:
       - type: git
         path: wrapper
