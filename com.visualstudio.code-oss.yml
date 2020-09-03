@@ -1,9 +1,7 @@
 id: com.visualstudio.code-oss
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: "19.08"
-base: org.electronjs.Electron2.BaseApp
-base-version: "19.08"
+runtime-version: "20.08"
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -135,6 +133,7 @@ modules:
     config-opts:
       - -Deditor_binary=/app/main/bin/code-oss
       - -Dprogram_name=code-oss
+      - -Deditor_title=Visual Studio Code Open Source
     sources:
       - type: git
         path: wrapper
