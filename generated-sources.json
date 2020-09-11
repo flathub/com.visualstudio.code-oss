@@ -25,7 +25,13 @@
         "url": "https://www.electronjs.org/headers/v9.2.1/node-v9.2.1-headers.tar.gz",
         "strip-components": 1,
         "sha256": "0fc4e9a3d387928e80f9be1543bb0e2fdd4073a23eac4b3bec2c9d6861f1947f",
-        "dest": "flatpak-node/node-gyp/electron-current"
+        "dest": "flatpak-node/cache/node-gyp/9.2.1"
+    },
+    {
+        "type": "file",
+        "url": "data:9",
+        "dest-filename": "installVersion",
+        "dest": "flatpak-node/cache/node-gyp/9.2.1"
     },
     {
         "type": "file",
@@ -60,14 +66,14 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/SHASUMS256.txt",
         "sha256": "a968425a5277c5cd6baa2ee1fc36d9215078aa1b7b960351d666a4c755712388",
         "dest-filename": "SHASUMS256.txt-9.2.1",
-        "dest": "flatpak-node/electron-cache"
+        "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/electron-v9.2.1-linux-arm64.zip",
         "sha256": "341b6dcadde08aab5a7e78430990a22c55529630bf9c4d7f69d25907f2a12679",
         "dest-filename": "electron-v9.2.1-linux-arm64.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
         ]
@@ -77,7 +83,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/electron-v9.2.1-linux-armv7l.zip",
         "sha256": "cc8cd63f873d98172b72562ce238b3c041345f7f53cbaef635d5a015b3a4190c",
         "dest-filename": "electron-v9.2.1-linux-armv7l.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
         ]
@@ -87,7 +93,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/electron-v9.2.1-linux-ia32.zip",
         "sha256": "2e344562484cfbe967f971896b8a1aa550253dc9db4f3d20ba21e8edc4de1a6d",
         "dest-filename": "electron-v9.2.1-linux-ia32.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
         ]
@@ -97,7 +103,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/electron-v9.2.1-linux-x64.zip",
         "sha256": "eb0bd52e713594b6a5cdba7815ae55dcb034c05314bc3b4150e45a5466857c79",
         "dest-filename": "electron-v9.2.1-linux-x64.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
         ]
@@ -107,7 +113,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/ffmpeg-v9.2.1-linux-arm64.zip",
         "sha256": "2ccb47a81e212d94bea3ca4e8597ba2736088ec62a7f3115f30305102b8ab835",
         "dest-filename": "ffmpeg-v9.2.1-linux-arm64.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
         ]
@@ -117,7 +123,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/ffmpeg-v9.2.1-linux-armv7l.zip",
         "sha256": "ee4f7037c9252c2dedda021c13097bf04b1c9f271ae52b59f9267de9196e3871",
         "dest-filename": "ffmpeg-v9.2.1-linux-armv7l.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
         ]
@@ -127,7 +133,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/ffmpeg-v9.2.1-linux-ia32.zip",
         "sha256": "576000b433ee017e34903791ee5f9e0df5287cdcf260a73ad8cf19ccd5f61412",
         "dest-filename": "ffmpeg-v9.2.1-linux-ia32.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
         ]
@@ -137,7 +143,7 @@
         "url": "https://github.com/electron/electron/releases/download/v9.2.1/ffmpeg-v9.2.1-linux-x64.zip",
         "sha256": "04d17cf4b688073f1bcc60821b62e24ce7d320a3cabab18c4cb14daa2da255c4",
         "dest-filename": "ffmpeg-v9.2.1-linux-x64.zip",
-        "dest": "flatpak-node/electron-cache",
+        "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
         ]
@@ -15620,7 +15626,87 @@
         "commands": [
             "gunzip \"flatpak-node/yarn-mirror/ts-server-web-build-1d85be25043f9b5e36a531941ea345dd5a2ca007.gz\"",
             "mkdir -p \"flatpak-node/tmp/gulp-electron-cache/atom\"",
-            "ln -sfTr \"flatpak-node/electron-cache\" \"flatpak-node/tmp/gulp-electron-cache/atom/electron\""
+            "ln -sfTr \"flatpak-node/cache/electron\" \"flatpak-node/tmp/gulp-electron-cache/atom/electron\""
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../electron-v9.2.1-linux-arm64.zip\" \"electron-v9.2.1-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1electron-v9.2.1-linux-arm64.zip",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../electron-v9.2.1-linux-armv7l.zip\" \"electron-v9.2.1-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1electron-v9.2.1-linux-armv7l.zip",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../electron-v9.2.1-linux-ia32.zip\" \"electron-v9.2.1-linux-ia32.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1electron-v9.2.1-linux-ia32.zip",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../electron-v9.2.1-linux-x64.zip\" \"electron-v9.2.1-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1electron-v9.2.1-linux-x64.zip",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../ffmpeg-v9.2.1-linux-arm64.zip\" \"ffmpeg-v9.2.1-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1ffmpeg-v9.2.1-linux-arm64.zip",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../ffmpeg-v9.2.1-linux-armv7l.zip\" \"ffmpeg-v9.2.1-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1ffmpeg-v9.2.1-linux-armv7l.zip",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../ffmpeg-v9.2.1-linux-ia32.zip\" \"ffmpeg-v9.2.1-linux-ia32.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1ffmpeg-v9.2.1-linux-ia32.zip",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "ln -s \"../ffmpeg-v9.2.1-linux-x64.zip\" \"ffmpeg-v9.2.1-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv9.2.1ffmpeg-v9.2.1-linux-x64.zip",
+        "only-arches": [
+            "x86_64"
         ]
     }
 ]

@@ -63,9 +63,6 @@ modules:
       env:
         TMPDIR: /run/build/vscode/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/vscode/flatpak-node/cache
-        ELECTRON_CACHE: /run/build/vscode/flatpak-node/electron-cache
-        electron_config_cache: /run/build/vscode/flatpak-node/electron-cache
-        npm_config_nodedir: /run/build/vscode/flatpak-node/node-gyp/electron-current
         DEBUG: electron-rebuild,electron-builder
         CHILD_CONCURRENCY: "1"
         VSCODE_QUALITY: stable
