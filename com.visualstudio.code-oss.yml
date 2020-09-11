@@ -114,6 +114,7 @@ modules:
         paths:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
+          - patches/disable-vscode-server.patch
         dest: main
 
       - type: file
