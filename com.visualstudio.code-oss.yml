@@ -63,9 +63,6 @@ modules:
       env:
         TMPDIR: /run/build/vscode/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/vscode/flatpak-node/cache
-        ELECTRON_CACHE: /run/build/vscode/flatpak-node/electron-cache
-        electron_config_cache: /run/build/vscode/flatpak-node/electron-cache
-        npm_config_nodedir: /run/build/vscode/flatpak-node/node-gyp/electron-current
         DEBUG: electron-rebuild,electron-builder
         CHILD_CONCURRENCY: "1"
         VSCODE_QUALITY: stable
@@ -109,14 +106,15 @@ modules:
     sources:
       - type: git
         url: "https://github.com/microsoft/vscode.git"
-        tag: "1.48.2"
-        commit: a0479759d6e9ea56afa657e454193f72aef85bd0
+        tag: "1.49.0"
+        commit: e790b931385d72cf5669fcefc51cdf65990efa5d
         dest: main
 
       - type: patch
         paths:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
+          - patches/disable-vscode-server.patch
         dest: main
 
       - type: file
