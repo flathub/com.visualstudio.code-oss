@@ -131,8 +131,9 @@ modules:
     buildsystem: meson
     config-opts:
       - -Deditor_binary=/app/main/bin/code-oss
+      - -Deditor_args=['--extensions-dir', '$XDG_DATA_HOME/vscode/extensions']
       - -Dprogram_name=code-oss
       - -Deditor_title=Visual Studio Code Open Source
     sources:
-      - type: git
+      - type: dir
         path: wrapper
