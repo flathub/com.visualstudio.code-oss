@@ -3279,6 +3279,13 @@
     },
     {
         "type": "file",
+        "url": "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.3.tgz#c1df38231448e45ca4ac588e6c79573ba6a57d5b",
+        "sha512": "0ed33783b8ee09743115548d3cd072102dbe3489ad06ec5042f5a51ee9e92484b939caf4946df4e9c0bb1428bb7040347f39b26cf508978b71048a1b93580639",
+        "dest-filename": "chokidar-3.4.3.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
         "url": "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181",
         "sha1": "e2a75042a9551908bebd25b8523d5f9769d79181",
         "dest-filename": "chownr-1.0.1.tgz",
@@ -12130,6 +12137,13 @@
         "url": "https://registry.yarnpkg.com/readdirp/-/readdirp-3.4.0.tgz#9fdccdf9e9155805449221ac645e8303ab5b9ada",
         "sha512": "d317b4d35bd90672442beb8a723f2a3a1c8028fcc84fe812b715abdcb081d03c1c5d1e4d649dc8682fb21a71c263307f4bba2fde6dc411b648db378dbd7fa119",
         "dest-filename": "readdirp-3.4.0.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/readdirp/-/readdirp-3.5.0.tgz#9ba74c019b15d365278d2e91bb8c48d7b4d42c9e",
+        "sha512": "70c86eedcffcadd8641d75ac63ea2c0617d2cb4262930a472bfe7e8a6a3e2e979ab1317ca2e12b1eb9589304f4fbe9e38b2b83bdcece158e53dee92f67caa615",
+        "dest-filename": "readdirp-3.5.0.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
