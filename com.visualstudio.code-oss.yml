@@ -107,8 +107,8 @@ modules:
     sources:
       - type: git
         url: "https://github.com/microsoft/vscode.git"
-        tag: "1.51.1"
-        commit: e5a624b788d92b8d34d1392e4c4d9789406efe8f
+        tag: "1.52.0"
+        commit: 940b5f4bb5fa47866a54529ed759d95d09ee80be
         dest: main
 
       - type: patch
