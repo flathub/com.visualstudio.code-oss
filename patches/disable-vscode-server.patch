@@ -1,16 +1,16 @@
 diff --git a/build/npm/postinstall.js b/build/npm/postinstall.js
-index 8f8b0019a7..028df6989a 100644
+index 18ccef884a9..98356ecae31 100644
 --- a/build/npm/postinstall.js
 +++ b/build/npm/postinstall.js
-@@ -33,11 +33,6 @@ function yarnInstall(location, opts) {
+@@ -48,6 +48,11 @@ for (let dir of dirs) {
+ 		continue;
+ 	}
  
- yarnInstall('extensions'); // node modules shared by all extensions
- 
--if (!(process.platform === 'win32' && (process.arch === 'arm64' || process.env['npm_config_arch'] === 'arm64'))) {
--	yarnInstall('remote'); // node modules used by vscode server
--	yarnInstall('remote/web'); // node modules used by vscode web
--}
--
- const allExtensionFolders = fs.readdirSync('extensions');
- const extensions = allExtensionFolders.filter(e => {
- 	try {
++	if (/^remote/.test(dir) && process.env['FLATPAK_DEST']) {
++		// don't build vscode-remote for flatpak
++		continue;
++	}
++
+ 	if (dir === 'build/lib/watch') {
+ 		// node modules for watching, specific to host node version, not electron
+ 		yarnInstallBuildDependencies();
