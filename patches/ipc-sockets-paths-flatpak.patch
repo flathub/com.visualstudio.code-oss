@@ -1,5 +1,5 @@
 diff --git a/extensions/git/src/ipc/ipcServer.ts b/extensions/git/src/ipc/ipcServer.ts
-index 5cea9faf98..0e4271162b 100644
+index 5cea9faf98f..0e4271162bc 100644
 --- a/extensions/git/src/ipc/ipcServer.ts
 +++ b/extensions/git/src/ipc/ipcServer.ts
 @@ -16,8 +16,14 @@ function getIPCHandlePath(id: string): string {
@@ -20,10 +20,10 @@ index 5cea9faf98..0e4271162b 100644
  
  	return path.join(os.tmpdir(), `vscode-git-${id}.sock`);
 diff --git a/src/vs/base/parts/ipc/node/ipc.net.ts b/src/vs/base/parts/ipc/node/ipc.net.ts
-index 39ef87b846..8559a92cb2 100644
+index ae2d2a60c4c..54f68436ece 100644
 --- a/src/vs/base/parts/ipc/node/ipc.net.ts
 +++ b/src/vs/base/parts/ipc/node/ipc.net.ts
-@@ -307,6 +307,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
+@@ -477,6 +477,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
  	[Platform.Mac]: 103
  };
  
@@ -43,7 +43,7 @@ index 39ef87b846..8559a92cb2 100644
  export function createRandomIPCHandle(): string {
  	const randomSuffix = generateUuid();
  
-@@ -319,7 +332,7 @@ export function createRandomIPCHandle(): string {
+@@ -489,7 +502,7 @@ export function createRandomIPCHandle(): string {
  	// XDG_RUNTIME_DIR over tmpDir
  	let result: string;
  	if (XDG_RUNTIME_DIR) {
@@ -52,7 +52,7 @@ index 39ef87b846..8559a92cb2 100644
  	} else {
  		result = join(tmpdir(), `vscode-ipc-${randomSuffix}.sock`);
  	}
-@@ -343,7 +356,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
+@@ -513,7 +526,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
  	// unless portable
  	let result: string;
  	if (XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {

@@ -67,6 +67,7 @@ modules:
         DEBUG: electron-rebuild,electron-builder
         CHILD_CONCURRENCY: "1"
         VSCODE_QUALITY: stable
+        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/vscode/flatpak-node/cache/esbuild/bin/esbuild
       arch:
         arm: { env: { earch: armv7l, suffix: "-armv7l" } }
         aarch64: { env: { earch: arm64, suffix: "-arm64" } }
@@ -107,8 +108,8 @@ modules:
     sources:
       - type: git
         url: "https://github.com/microsoft/vscode.git"
-        tag: "1.52.1"
-        commit: ea3859d4ba2f3e577a159bc91e3074c5d85c0523
+        tag: "1.53.0"
+        commit: 8490d3dde47c57ba65ec40dd192d014fd2113496
         dest: main
 
       - type: patch

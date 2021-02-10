@@ -1,8 +1,8 @@
 diff --git a/src/vs/platform/product/common/product.ts b/src/vs/platform/product/common/product.ts
-index c413616e47..aad6724fd2 100644
+index 537db557d87..6568d36f431 100644
 --- a/src/vs/platform/product/common/product.ts
 +++ b/src/vs/platform/product/common/product.ts
-@@ -46,6 +46,15 @@ else if (typeof require !== 'undefined' && typeof require.__$__nodeRequire === '
+@@ -56,6 +56,15 @@ else {
  		});
  	}
  
