@@ -18,7 +18,7 @@
         "url": "https://registry.npmjs.org/esbuild-linux-32/-/esbuild-linux-32-0.8.30.tgz",
         "strip-components": 1,
         "sha256": "9ac9779beaea2606a6f29be3398f1a02131e300fb28f48bc139c59a7bfe6c518",
-        "dest": "flatpak-node/cache/esbuild",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-32@0.8.30",
         "only-arches": [
             "i386"
         ]
@@ -28,7 +28,7 @@
         "url": "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.8.30.tgz",
         "strip-components": 1,
         "sha256": "b965588c00d957ff7c00aa5dca0004f5cdd72f701bf6e670f5fde7c5cc4b27eb",
-        "dest": "flatpak-node/cache/esbuild",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-64@0.8.30",
         "only-arches": [
             "x86_64"
         ]
@@ -38,7 +38,7 @@
         "url": "https://registry.npmjs.org/esbuild-linux-arm/-/esbuild-linux-arm-0.8.30.tgz",
         "strip-components": 1,
         "sha256": "97be6ffcbf5877fefb08e2f4db6d2d835b323f0a9d822dcd9f4b9e0afb7ae9f8",
-        "dest": "flatpak-node/cache/esbuild",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-arm@0.8.30",
         "only-arches": [
             "arm"
         ]
@@ -48,7 +48,7 @@
         "url": "https://registry.npmjs.org/esbuild-linux-arm64/-/esbuild-linux-arm64-0.8.30.tgz",
         "strip-components": 1,
         "sha256": "bd2d1168c8e98cd51ec4246e49380c400cb4b1ce9cfd0eabfd2ef0de0f2b2b25",
-        "dest": "flatpak-node/cache/esbuild",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-arm64@0.8.30",
         "only-arches": [
             "aarch64"
         ]
@@ -12986,6 +12986,54 @@
         "dest": "flatpak-node/cache/electron/httpsgithub.comelectronelectronreleasesdownloadv11.2.1ffmpeg-v11.2.1-linux-x64.zip",
         "only-arches": [
             "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"bin\"",
+            "cp \".package/esbuild-linux-32@0.8.30/bin/esbuild\" \"bin/esbuild-linux-32@0.8.30\"",
+            "ln -sf \"esbuild-linux-32@0.8.30\" \"bin/esbuild-current\""
+        ],
+        "dest": "flatpak-node/cache/esbuild",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"bin\"",
+            "cp \".package/esbuild-linux-64@0.8.30/bin/esbuild\" \"bin/esbuild-linux-64@0.8.30\"",
+            "ln -sf \"esbuild-linux-64@0.8.30\" \"bin/esbuild-current\""
+        ],
+        "dest": "flatpak-node/cache/esbuild",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"bin\"",
+            "cp \".package/esbuild-linux-arm64@0.8.30/bin/esbuild\" \"bin/esbuild-linux-arm64@0.8.30\"",
+            "ln -sf \"esbuild-linux-arm64@0.8.30\" \"bin/esbuild-current\""
+        ],
+        "dest": "flatpak-node/cache/esbuild",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"bin\"",
+            "cp \".package/esbuild-linux-arm@0.8.30/bin/esbuild\" \"bin/esbuild-linux-arm@0.8.30\"",
+            "ln -sf \"esbuild-linux-arm@0.8.30\" \"bin/esbuild-current\""
+        ],
+        "dest": "flatpak-node/cache/esbuild",
+        "only-arches": [
+            "arm"
         ]
     },
     {

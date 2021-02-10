@@ -67,7 +67,7 @@ modules:
         DEBUG: electron-rebuild,electron-builder
         CHILD_CONCURRENCY: "1"
         VSCODE_QUALITY: stable
-        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/vscode/flatpak-node/cache/esbuild/bin/esbuild
+        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/vscode/flatpak-node/cache/esbuild/bin/esbuild-current
       arch:
         arm: { env: { earch: armv7l, suffix: "-armv7l" } }
         aarch64: { env: { earch: arm64, suffix: "-arm64" } }
