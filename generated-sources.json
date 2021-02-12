@@ -11658,16 +11658,16 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/typescript/-/typescript-4.1.2.tgz#6369ef22516fe5e10304aae5a5c4862db55380e9",
-        "sha512": "b611a5a16b061f748ec6fd52a18ed0a232a2d2d73ef059ce9a26ab10631b77f95aafb40e11dde1be5c77169e72e8594350697d2fea5de27d9efa84e818c9a145",
-        "dest-filename": "typescript-4.1.2.tgz",
+        "url": "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7",
+        "sha512": "07764839fd4829e1f68b1807863ea56bac5dc11f50acb0b977554a782498e2dbe4aa11767aa77d3bbb713654b43cedc6ac100521daf72f59dd370b5e51b64b62",
+        "dest-filename": "typescript-4.1.3.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7",
-        "sha512": "07764839fd4829e1f68b1807863ea56bac5dc11f50acb0b977554a782498e2dbe4aa11767aa77d3bbb713654b43cedc6ac100521daf72f59dd370b5e51b64b62",
-        "dest-filename": "typescript-4.1.3.tgz",
+        "url": "https://registry.yarnpkg.com/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72",
+        "sha512": "e8e4aef4f4c8ce69fd4c20e2a2f50b4e7113e81817b4360be06838b3363e706b1cdc93f57502fcaaf13c912853471d4d230e10f480479703838e48d612d314c8",
+        "dest-filename": "typescript-4.1.5.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -12134,9 +12134,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/vscode-emmet-helper/-/vscode-emmet-helper-2.2.4-2.tgz#8019188077a91dbe9a8d8c10c0b79369bb5c24d6",
-        "sha512": "ed44d95f0b7d335c70695ef6a36620481568821b43b6c7138184ce9759223e45cdf4e2a2338379da1707140d4b951b5d4ef2107783c49206b3e7b17d653ff892",
-        "dest-filename": "vscode-emmet-helper-2.2.4-2.tgz",
+        "url": "https://registry.yarnpkg.com/vscode-emmet-helper/-/vscode-emmet-helper-2.2.4.tgz#8ab86d2b7fe9e6270b4c77c9fd8d1eb8f3f4c401",
+        "sha512": "d4de9b3333f56739031b36a6bec2b143f94e981738f8e41d8f4740d82f40e4f49e615f60879c5b274eb5b26f95c851ce19913e572510ab99bf585985b0b6ca9c",
+        "dest-filename": "vscode-emmet-helper-2.2.4.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
