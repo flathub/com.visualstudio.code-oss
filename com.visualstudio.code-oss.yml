@@ -108,8 +108,8 @@ modules:
     sources:
       - type: git
         url: "https://github.com/microsoft/vscode.git"
-        tag: "1.53.2"
-        commit: 622cb03f7e070a9670c94bae1a45d78d7181fbd4
+        tag: "1.54.0"
+        commit: 42e27fe5cdc58539dad9867970326a297eb8cacf
         dest: main
 
       - type: patch
@@ -117,6 +117,7 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
           - patches/disable-vscode-server.patch
+          - patches/use-only-yarnpkg-registry.patch
         dest: main
 
       - type: file
