@@ -1,7 +1,7 @@
 id: com.visualstudio.code-oss
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: "20.08"
+runtime-version: '20.08'
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -26,7 +26,7 @@ add-extensions:
   com.visualstudio.code.tool:
     directory: tools
     subdirectories: true
-    version: "20.08"
+    version: '20.08'
     add-ld-path: lib
     no-autodownload: true
 modules:
@@ -39,10 +39,10 @@ modules:
       - python3 setup.py build -j${FLATPAK_BUILDER_N_JOBS}
       - python3 setup.py install --prefix=${FLATPAK_DEST} --root=/
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: archive
-        url: "https://github.com/python-pillow/Pillow/archive/7.1.2.tar.gz"
+        url: https://github.com/python-pillow/Pillow/archive/7.1.2.tar.gz
         sha256: 0149ff56547ef4ea658c833d7fb5af687a25cccc7ca4de58486578406a4ede27
 
   - name: yarn
@@ -53,10 +53,10 @@ modules:
       - ln -s /app/share/yarn/bin/yarn /app/bin/yarn
       - ln -s /app/share/yarn/bin/yarnpkg /app/bin/yarnpkg
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: archive
-        url: "https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz"
+        url: https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz
         sha256: 7e433d4a77e2c79e6a7ae4866782608a8e8bcad3ec6783580577c59538381a6e
 
   - name: vscode
@@ -65,14 +65,14 @@ modules:
         TMPDIR: /run/build/vscode/flatpak-node/tmp
         XDG_CACHE_HOME: /run/build/vscode/flatpak-node/cache
         DEBUG: electron-rebuild,electron-builder
-        CHILD_CONCURRENCY: "1"
+        CHILD_CONCURRENCY: '1'
         VSCODE_QUALITY: stable
         ESBUILD_BIN_PATH_FOR_TESTS: /run/build/vscode/flatpak-node/cache/esbuild/bin/esbuild-current
       arch:
-        arm: { env: { earch: armv7l, suffix: "-armv7l" } }
-        aarch64: { env: { earch: arm64, suffix: "-arm64" } }
-        i386: { env: { earch: ia32, suffix: "-ia32" } }
-        x86_64: { env: { earch: x64, suffix: "" } }
+        arm: {env: {earch: armv7l, suffix: -armv7l}}
+        aarch64: {env: {earch: arm64, suffix: -arm64}}
+        i386: {env: {earch: ia32, suffix: -ia32}}
+        x86_64: {env: {earch: x64, suffix: ''}}
     buildsystem: simple
     build-commands:
       # Prepare
@@ -107,9 +107,9 @@ modules:
     subdir: main
     sources:
       - type: git
-        url: "https://github.com/microsoft/vscode.git"
-        tag: "1.54.2"
-        commit: fd6f3bce6709b121a895d042d343d71f317d74e7
+        url: https://github.com/microsoft/vscode.git
+        tag: 1.54.3
+        commit: 2b9aebd5354a3629c3aba0a5f5df49f43d6689f8
         dest: main
         x-checker-data:
           type: json
