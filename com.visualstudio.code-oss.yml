@@ -111,6 +111,13 @@ modules:
         tag: "1.54.2"
         commit: fd6f3bce6709b121a895d042d343d71f317d74e7
         dest: main
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/microsoft/vscode/releases/latest
+          tag-query: .tag_name
+          version-query: $tag
+          timestamp-query: .published_at
+          is-main-source: true
 
       - type: patch
         paths:
