@@ -89,6 +89,7 @@ modules:
           .extensionAllowedProposedApi+=[
             "GitHub.vscode-pull-request-github",
             "ms-python.python",
+            "ms-toolsai.jupyter",
             "ms-vscode.js-debug",
             "ms-vsliveshare.vsliveshare"
           ] |
