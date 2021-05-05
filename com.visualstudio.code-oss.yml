@@ -125,7 +125,6 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
           - patches/disable-vscode-server.patch
-          - patches/use-only-yarnpkg-registry.patch
         dest: main
 
       - type: file
