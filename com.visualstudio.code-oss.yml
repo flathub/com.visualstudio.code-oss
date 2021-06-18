@@ -110,8 +110,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.57.0
-        commit: b4c1bd0a9b03c749ea011b06c6d2676c8091a70c
+        tag: 1.57.1
+        commit: 507ce72a4466fbb27b715c3722558bb15afa9f48
         dest: main
         x-checker-data:
           type: json
@@ -126,7 +126,6 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
           - patches/disable-vscode-server.patch
-          - patches/0001-linux-restore-no-sandbox-for-startup-scripts.patch
         dest: main
 
       - type: file

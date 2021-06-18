@@ -102,16 +102,16 @@
     },
     {
         "type": "archive",
-        "url": "https://www.electronjs.org/headers/v12.0.9/node-v12.0.9-headers.tar.gz",
+        "url": "https://www.electronjs.org/headers/v12.0.7/node-v12.0.7-headers.tar.gz",
         "strip-components": 1,
-        "sha256": "c674452aa4f54ccaf32460251c8bdd262eb4d75b282e6d79ee5c3c25e7978cef",
-        "dest": "flatpak-node/cache/node-gyp/12.0.9"
+        "sha256": "cb799b04a10475610136b6dab5ca8757e62068d64fe73b4b3d62918c8f5429ca",
+        "dest": "flatpak-node/cache/node-gyp/12.0.7"
     },
     {
         "type": "file",
         "url": "data:9",
         "dest-filename": "installVersion",
-        "dest": "flatpak-node/cache/node-gyp/12.0.9"
+        "dest": "flatpak-node/cache/node-gyp/12.0.7"
     },
     {
         "type": "file",
@@ -154,16 +154,16 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/SHASUMS256.txt",
-        "sha256": "2f815c39fa7a316568d08f0f5bbc54b90c29b8245c94744d2496549bd4ef0d80",
-        "dest-filename": "SHASUMS256.txt-12.0.9",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/SHASUMS256.txt",
+        "sha256": "bbcff5cce64667b4e377688b79f0aa7d3c9cd52f25f289dbe220502b6f3a1544",
+        "dest-filename": "SHASUMS256.txt-12.0.7",
         "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/electron-v12.0.9-linux-arm64.zip",
-        "sha256": "22a85817ea2edbba2e17b35f6e3a8104b2165e070ea21a1f2fa3b40e8d7aecc9",
-        "dest-filename": "electron-v12.0.9-linux-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/electron-v12.0.7-linux-arm64.zip",
+        "sha256": "3eddc0c507a43cce4e714bfe509d99218b5ab99f4660dd173aac2a895576dc71",
+        "dest-filename": "electron-v12.0.7-linux-arm64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
@@ -171,9 +171,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/electron-v12.0.9-linux-armv7l.zip",
-        "sha256": "2d41ef3ed6a215efe2c7d03d8055fcfda0079f09e9580e5bf70e8ac4a22b0898",
-        "dest-filename": "electron-v12.0.9-linux-armv7l.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/electron-v12.0.7-linux-armv7l.zip",
+        "sha256": "53cc1250ff62f2353d8dd37552cbd7bdcaaa756106faee8b809303bed00e040a",
+        "dest-filename": "electron-v12.0.7-linux-armv7l.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
@@ -181,9 +181,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/electron-v12.0.9-linux-ia32.zip",
-        "sha256": "37405b3b27779ad417c3ae432d7f0d969c126c958a0ad8f2585c34fc8ee6c6e6",
-        "dest-filename": "electron-v12.0.9-linux-ia32.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/electron-v12.0.7-linux-ia32.zip",
+        "sha256": "16023d86b88c7fccafd491c020d064caa2138d6a3493664739714555f72e5b06",
+        "dest-filename": "electron-v12.0.7-linux-ia32.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
@@ -191,9 +191,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/electron-v12.0.9-linux-x64.zip",
-        "sha256": "3ab0a873f720d3bf56cce6ca1bf9d8b956843920798f659ca0829e4cc3126f6d",
-        "dest-filename": "electron-v12.0.9-linux-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/electron-v12.0.7-linux-x64.zip",
+        "sha256": "335b77b35361fac4e2df1b7e8de5cf055e0a1a2065759cb2dd4508e8a77949fa",
+        "dest-filename": "electron-v12.0.7-linux-x64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
@@ -201,9 +201,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/ffmpeg-v12.0.9-linux-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/ffmpeg-v12.0.7-linux-arm64.zip",
         "sha256": "c8cea40f68dbbde38d9de82e0bc5ab002019d8a6abe98aba18a125643cce44fd",
-        "dest-filename": "ffmpeg-v12.0.9-linux-arm64.zip",
+        "dest-filename": "ffmpeg-v12.0.7-linux-arm64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
@@ -211,9 +211,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/ffmpeg-v12.0.9-linux-armv7l.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/ffmpeg-v12.0.7-linux-armv7l.zip",
         "sha256": "b33c9417882a7f8a9c6f28f43bf6157c14d48742866bb2a0a440910205f1b1f6",
-        "dest-filename": "ffmpeg-v12.0.9-linux-armv7l.zip",
+        "dest-filename": "ffmpeg-v12.0.7-linux-armv7l.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
@@ -221,9 +221,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/ffmpeg-v12.0.9-linux-ia32.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/ffmpeg-v12.0.7-linux-ia32.zip",
         "sha256": "963a1151023f0ec37bc45fe873fdbc5e7c8f2449aead33b4b00f2ad4794fb361",
-        "dest-filename": "ffmpeg-v12.0.9-linux-ia32.zip",
+        "dest-filename": "ffmpeg-v12.0.7-linux-ia32.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
@@ -231,9 +231,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v12.0.9/ffmpeg-v12.0.9-linux-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v12.0.7/ffmpeg-v12.0.7-linux-x64.zip",
         "sha256": "21e5a85b62a2d66bcad55c12debefd99d7159053e6f06ad3f05374957e228444",
-        "dest-filename": "ffmpeg-v12.0.9-linux-x64.zip",
+        "dest-filename": "ffmpeg-v12.0.7-linux-x64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
@@ -4430,9 +4430,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron/-/electron-12.0.9.tgz#d582afa8f6fc0c429606f0961a4c89b376994823",
-        "sha512": "a79684b75b4887f3d88f037ee8c1d37391ed5b9dbd5d1f6be10963f4f3dc49be6e6e4a2d4ac4b406d589a113e10de9d200df2c807937b1b64bc573c9b5d9d160",
-        "dest-filename": "electron-12.0.9.tgz",
+        "url": "https://registry.yarnpkg.com/electron/-/electron-12.0.7.tgz#e0fca2c8be34cb7da48c4d15cfb1d2ad666d2718",
+        "sha512": "ef6d9364d283b8ba449a3f7a0334d814a1da2441fdf3180e047d1a95d4ad68f5c8d710c57dbf5225042e8abbf01659301b93aa41dcfa35edcec3027b0dbb399d",
+        "dest-filename": "electron-12.0.7.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -12924,10 +12924,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-arm64.zip\"",
-            "ln -s \"../electron-v12.0.9-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-arm64.zip/electron-v12.0.9-linux-arm64.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../electron-v12.0.9-linux-arm64.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/electron-v12.0.9-linux-arm64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-arm64.zip\"",
+            "ln -s \"../electron-v12.0.7-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-arm64.zip/electron-v12.0.7-linux-arm64.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../electron-v12.0.7-linux-arm64.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/electron-v12.0.7-linux-arm64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -12937,10 +12937,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-armv7l.zip\"",
-            "ln -s \"../electron-v12.0.9-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-armv7l.zip/electron-v12.0.9-linux-armv7l.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../electron-v12.0.9-linux-armv7l.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/electron-v12.0.9-linux-armv7l.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-armv7l.zip\"",
+            "ln -s \"../electron-v12.0.7-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-armv7l.zip/electron-v12.0.7-linux-armv7l.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../electron-v12.0.7-linux-armv7l.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/electron-v12.0.7-linux-armv7l.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -12950,10 +12950,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-ia32.zip\"",
-            "ln -s \"../electron-v12.0.9-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-ia32.zip/electron-v12.0.9-linux-ia32.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../electron-v12.0.9-linux-ia32.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/electron-v12.0.9-linux-ia32.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-ia32.zip\"",
+            "ln -s \"../electron-v12.0.7-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-ia32.zip/electron-v12.0.7-linux-ia32.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../electron-v12.0.7-linux-ia32.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/electron-v12.0.7-linux-ia32.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -12963,10 +12963,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-x64.zip\"",
-            "ln -s \"../electron-v12.0.9-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9electron-v12.0.9-linux-x64.zip/electron-v12.0.9-linux-x64.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../electron-v12.0.9-linux-x64.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/electron-v12.0.9-linux-x64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-x64.zip\"",
+            "ln -s \"../electron-v12.0.7-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7electron-v12.0.7-linux-x64.zip/electron-v12.0.7-linux-x64.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../electron-v12.0.7-linux-x64.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/electron-v12.0.7-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -12976,10 +12976,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-arm64.zip\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-arm64.zip/ffmpeg-v12.0.9-linux-arm64.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-arm64.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/ffmpeg-v12.0.9-linux-arm64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-arm64.zip\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-arm64.zip/ffmpeg-v12.0.7-linux-arm64.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-arm64.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/ffmpeg-v12.0.7-linux-arm64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -12989,10 +12989,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-armv7l.zip\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-armv7l.zip/ffmpeg-v12.0.9-linux-armv7l.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-armv7l.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/ffmpeg-v12.0.9-linux-armv7l.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-armv7l.zip\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-armv7l.zip/ffmpeg-v12.0.7-linux-armv7l.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-armv7l.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/ffmpeg-v12.0.7-linux-armv7l.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -13002,10 +13002,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-ia32.zip\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-ia32.zip/ffmpeg-v12.0.9-linux-ia32.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-ia32.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/ffmpeg-v12.0.9-linux-ia32.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-ia32.zip\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-ia32.zip/ffmpeg-v12.0.7-linux-ia32.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-ia32.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/ffmpeg-v12.0.7-linux-ia32.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -13015,10 +13015,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-x64.zip\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.9ffmpeg-v12.0.9-linux-x64.zip/ffmpeg-v12.0.9-linux-x64.zip\"",
-            "mkdir -p \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039\"",
-            "ln -s \"../ffmpeg-v12.0.9-linux-x64.zip\" \"376a2fb4acb08e8f20ba2f8924f96b4a37fdba7c85ee0f3dac834ab826f97039/ffmpeg-v12.0.9-linux-x64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-x64.zip\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv12.0.7ffmpeg-v12.0.7-linux-x64.zip/ffmpeg-v12.0.7-linux-x64.zip\"",
+            "mkdir -p \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52\"",
+            "ln -s \"../ffmpeg-v12.0.7-linux-x64.zip\" \"4f029753a9a8576806dced687079cdf26638acb9ef0f41141be4eff390c1bd52/ffmpeg-v12.0.7-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
