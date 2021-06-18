@@ -126,7 +126,6 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
           - patches/disable-vscode-server.patch
-          - patches/0001-linux-restore-no-sandbox-for-startup-scripts.patch
         dest: main
 
       - type: file
