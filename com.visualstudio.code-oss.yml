@@ -19,9 +19,9 @@ rename-desktop-file: code-oss.desktop
 rename-appdata-file: code-oss.appdata.xml
 rename-icon: code-oss
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node10
+  - org.freedesktop.Sdk.Extension.node14
 build-options:
-  append-path: /usr/lib/sdk/node10/bin
+  append-path: /usr/lib/sdk/node14/bin
 separate-locales: false
 add-extensions:
   com.visualstudio.code.tool:
