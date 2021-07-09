@@ -19,9 +19,9 @@ rename-desktop-file: code-oss.desktop
 rename-appdata-file: code-oss.appdata.xml
 rename-icon: code-oss
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node10
+  - org.freedesktop.Sdk.Extension.node14
 build-options:
-  append-path: /usr/lib/sdk/node10/bin
+  append-path: /usr/lib/sdk/node14/bin
 separate-locales: false
 add-extensions:
   com.visualstudio.code.tool:
@@ -110,8 +110,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.57.1
-        commit: 507ce72a4466fbb27b715c3722558bb15afa9f48
+        tag: 1.58.0
+        commit: 2d23c42a936db1c7b3b06f918cde29561cc47cd6
         dest: main
         x-checker-data:
           type: json
@@ -126,6 +126,7 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
           - patches/disable-vscode-server.patch
+          - patches/0001-linux-restore-no-sandbox-for-startup-scripts.patch
         dest: main
 
       - type: file
