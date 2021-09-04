@@ -1,4 +1,4 @@
-From e3422b0aee2fe38aa3368c9a978f71d9b3c228e1 Mon Sep 17 00:00:00 2001
+From 604107f3ff6bfc6622a03ed78390334b668e802b Mon Sep 17 00:00:00 2001
 From: Benjamin Pasero <benjamin.pasero@microsoft.com>
 Date: Fri, 11 Jun 2021 11:43:54 +0200
 Subject: [PATCH] linux - restore `--no-sandbox` for startup scripts
@@ -43,18 +43,18 @@ index ab3b79a011b..62d6bfc47b4 100755
 +Exec=@@EXEC@@ --no-sandbox --new-window %F
  Icon=@@ICON@@
 diff --git a/src/vs/code/node/cli.ts b/src/vs/code/node/cli.ts
-index 2e7b324ed1d..169b50ae77c 100644
+index 6c5098c277e..ea76ddf5526 100644
 --- a/src/vs/code/node/cli.ts
 +++ b/src/vs/code/node/cli.ts
-@@ -15,7 +15,7 @@ import { isAbsolute, join } from 'vs/base/common/path';
- import { whenDeleted, writeFileSync } from 'vs/base/node/pfs';
- import { findFreePort } from 'vs/base/node/ports';
- import { randomPort } from 'vs/base/common/ports';
--import { isWindows, IProcessEnvironment } from 'vs/base/common/platform';
-+import { isLinux, isWindows, IProcessEnvironment } from 'vs/base/common/platform';
+@@ -8,7 +8,7 @@ import { chmodSync, existsSync, readFileSync, statSync, truncateSync, unlinkSync
+ import { homedir } from 'os';
  import type { ProfilingSession, Target } from 'v8-inspect-profiler';
+ import { isAbsolute, join } from 'vs/base/common/path';
+-import { IProcessEnvironment, isWindows } from 'vs/base/common/platform';
++import { IProcessEnvironment, isWindows, isLinux } from 'vs/base/common/platform';
+ import { randomPort } from 'vs/base/common/ports';
  import { isString } from 'vs/base/common/types';
- import { hasStdinWithoutTty, stdinDataListener, getStdinFilePath, readFromStdin } from 'vs/platform/environment/node/stdin';
+ import { whenDeleted, writeFileSync } from 'vs/base/node/pfs';
 @@ -319,6 +319,10 @@ export async function main(argv: string[]): Promise<any> {
  			options['stdio'] = 'ignore';
  		}
