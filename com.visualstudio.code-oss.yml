@@ -46,20 +46,6 @@ modules:
         url: https://github.com/python-pillow/Pillow/archive/7.1.2.tar.gz
         sha256: 0149ff56547ef4ea658c833d7fb5af687a25cccc7ca4de58486578406a4ede27
 
-  - name: yarn
-    buildsystem: simple
-    build-commands:
-      - mkdir -p /app/share/yarn/
-      - cp -a * /app/share/yarn/
-      - ln -s /app/share/yarn/bin/yarn /app/bin/yarn
-      - ln -s /app/share/yarn/bin/yarnpkg /app/bin/yarnpkg
-    cleanup:
-      - '*'
-    sources:
-      - type: archive
-        url: https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz
-        sha256: 7e433d4a77e2c79e6a7ae4866782608a8e8bcad3ec6783580577c59538381a6e
-
   - name: vscode
     build-options:
       env:
