@@ -1,4 +1,4 @@
-From 604107f3ff6bfc6622a03ed78390334b668e802b Mon Sep 17 00:00:00 2001
+From 17e842c2c1a5baa504c4a6f66e17f96218b23638 Mon Sep 17 00:00:00 2001
 From: Benjamin Pasero <benjamin.pasero@microsoft.com>
 Date: Fri, 11 Jun 2021 11:43:54 +0200
 Subject: [PATCH] linux - restore `--no-sandbox` for startup scripts
@@ -43,19 +43,19 @@ index ab3b79a011b..62d6bfc47b4 100755
 +Exec=@@EXEC@@ --no-sandbox --new-window %F
  Icon=@@ICON@@
 diff --git a/src/vs/code/node/cli.ts b/src/vs/code/node/cli.ts
-index 6c5098c277e..ea76ddf5526 100644
+index c9235cf463c..03a561da973 100644
 --- a/src/vs/code/node/cli.ts
 +++ b/src/vs/code/node/cli.ts
-@@ -8,7 +8,7 @@ import { chmodSync, existsSync, readFileSync, statSync, truncateSync, unlinkSync
- import { homedir } from 'os';
+@@ -9,7 +9,7 @@ import { homedir, release, tmpdir } from 'os';
  import type { ProfilingSession, Target } from 'v8-inspect-profiler';
- import { isAbsolute, join } from 'vs/base/common/path';
--import { IProcessEnvironment, isWindows } from 'vs/base/common/platform';
-+import { IProcessEnvironment, isWindows, isLinux } from 'vs/base/common/platform';
+ import { Event } from 'vs/base/common/event';
+ import { isAbsolute, join, resolve } from 'vs/base/common/path';
+-import { IProcessEnvironment, isMacintosh, isWindows } from 'vs/base/common/platform';
++import { IProcessEnvironment, isMacintosh, isWindows, isLinux } from 'vs/base/common/platform';
  import { randomPort } from 'vs/base/common/ports';
  import { isString } from 'vs/base/common/types';
  import { whenDeleted, writeFileSync } from 'vs/base/node/pfs';
-@@ -319,6 +319,10 @@ export async function main(argv: string[]): Promise<any> {
+@@ -364,6 +364,10 @@ export async function main(argv: string[]): Promise<any> {
  			options['stdio'] = 'ignore';
  		}
  
@@ -63,9 +63,9 @@ index 6c5098c277e..ea76ddf5526 100644
 +			addArg(argv, '--no-sandbox'); // Electron 6 introduces a chrome-sandbox that requires root to run. This can fail. Disable sandbox via --no-sandbox
 +		}
 +
- 		const child = spawn(process.execPath, argv.slice(2), options);
- 
- 		if (args.wait && waitMarkerFilePath) {
+ 		let child: ChildProcess;
+ 		if (!isMacOSBigSurOrNewer) {
+ 			// We spawn process.execPath directly
 -- 
-2.31.1
+2.32.0
 
