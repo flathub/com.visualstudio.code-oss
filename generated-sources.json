@@ -13291,9 +13291,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/windows-process-tree/-/windows-process-tree-0.3.0.tgz#cf0d9291b22fba2a7f5a687c8272866e28fbcafd",
-        "sha512": "d1b288e2071de4c3ac3a99f64dd4ad0929678d386d1fa05d1eba1c7a463da82813aa012d75a52cd01e416aacb317d8d7a134b0cf7f0d31d135179e68e1f82ff5",
-        "dest-filename": "windows-process-tree-0.3.0.tgz",
+        "url": "https://registry.yarnpkg.com/windows-process-tree/-/windows-process-tree-0.3.2.tgz#8c39f39e7707e09fd74638a7ef644b5f389096d3",
+        "sha512": "c7c63828e57cb548613e23b44c7ef038c4d9ebbeebc3b544c2af9d4ee1c788b4c2964acd5d6498dd7ccfe9ecf77ecd8269be056a3aed9a2a91b348d33191dfcb",
+        "dest-filename": "windows-process-tree-0.3.2.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
