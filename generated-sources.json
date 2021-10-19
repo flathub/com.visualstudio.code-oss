@@ -29,10 +29,10 @@
     },
     {
         "type": "archive",
-        "url": "https://registry.npmjs.org/esbuild-linux-32/-/esbuild-linux-32-0.11.12.tgz",
+        "url": "https://registry.npmjs.org/esbuild-linux-32/-/esbuild-linux-32-0.11.23.tgz",
         "strip-components": 1,
-        "sha256": "a2e6fd614dcd627c1c736f38f80c3258981be6e26846c7f6c6f8aad9d0488051",
-        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-32@0.11.12",
+        "sha256": "9f006a805b4bdf66b176bd0135bf01fd2d25b6f47ec912e5537330e8fdaf4b92",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-32@0.11.23",
         "only-arches": [
             "i386"
         ]
@@ -49,10 +49,10 @@
     },
     {
         "type": "archive",
-        "url": "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.11.12.tgz",
+        "url": "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.11.23.tgz",
         "strip-components": 1,
-        "sha256": "be4c1295c9bcb4ecef1af4b389a76b8e913c567f4a1baa768144585772cb41c6",
-        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-64@0.11.12",
+        "sha256": "6978d7d632b5cbdb05ec35243e77522efec1b2e3c5b9b48b81188e778528f0d4",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-64@0.11.23",
         "only-arches": [
             "x86_64"
         ]
@@ -69,10 +69,10 @@
     },
     {
         "type": "archive",
-        "url": "https://registry.npmjs.org/esbuild-linux-arm/-/esbuild-linux-arm-0.11.12.tgz",
+        "url": "https://registry.npmjs.org/esbuild-linux-arm/-/esbuild-linux-arm-0.11.23.tgz",
         "strip-components": 1,
-        "sha256": "ad00ed1116e6c0e98828236472df0814260f311512a10818262794ad321c91fa",
-        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-arm@0.11.12",
+        "sha256": "a7adee0cb83d0d75a890a284ce8627bac9155c3f78497da360983e342da47f2d",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-arm@0.11.23",
         "only-arches": [
             "arm"
         ]
@@ -89,10 +89,10 @@
     },
     {
         "type": "archive",
-        "url": "https://registry.npmjs.org/esbuild-linux-arm64/-/esbuild-linux-arm64-0.11.12.tgz",
+        "url": "https://registry.npmjs.org/esbuild-linux-arm64/-/esbuild-linux-arm64-0.11.23.tgz",
         "strip-components": 1,
-        "sha256": "a459fefb25b34d94fcc216120dac54b710d95fbeaf005015e507c599fa53d05d",
-        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-arm64@0.11.12",
+        "sha256": "b856565bad59d7b1c252b8f026553e0eb1139ede9274ecb093f9c358b36a80d4",
+        "dest": "flatpak-node/cache/esbuild/.package/esbuild-linux-arm64@0.11.23",
         "only-arches": [
             "aarch64"
         ]
@@ -1559,9 +1559,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/@types/node/-/node-14.17.1.tgz#5e07e0cb2ff793aa7a1b41deae76221e6166049f",
-        "sha512": "feda54c850fb99e7a8a13470977b18962871d81ac913babd5c5ef5120b8f148c928fd07baa09d1b47b074e1a3ed00526e26d52bd61a6eae4a772b47de2ae95b7",
-        "dest-filename": "@types-node-14.17.1.tgz",
+        "url": "https://registry.yarnpkg.com/@types/node/-/node-14.17.27.tgz#5054610d37bb5f6e21342d0e6d24c494231f3b85",
+        "sha512": "f78f8085ff4871a0ee25395eff66fec33be39aeb715c011753a3bcd491db9585d48360431be767072ed5c483c7280c841031f308c43275326e5afac4f806a7cf",
+        "dest-filename": "@types-node-14.17.27.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -2038,6 +2038,13 @@
         "url": "https://registry.yarnpkg.com/@ungap/promise-all-settled/-/promise-all-settled-1.1.2.tgz#aa58042711d6e3275dd37dc597e5d31e8c290a44",
         "sha512": "b0bfdc12f2560270a55f0d301e4f39ff62f41ba4a3f140740ad7354c431b292b26a51a2caa1c23f605a0151652ac1af67fdb625c84b036108f9a57ea52ac9bf5",
         "dest-filename": "@ungap-promise-all-settled-1.1.2.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/@vscode/emmet-helper/-/emmet-helper-2.8.2.tgz#9b2ce4fdd62cf3fda45cf8af67c012cfce55edc9",
+        "sha512": "03ffa9901610ab6253a30d40d9f95f4e610e9a217bf342a9764a17ed506343bc2e8de03e08550f775ed875e21af5a8a6db4f89e49a7b485ba33c3c1516242e71",
+        "dest-filename": "@vscode-emmet-helper-2.8.2.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -5192,9 +5199,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.12.tgz#8cbe15bcb44212624c3e77c896a835f74dc71c3c",
-        "sha512": "73c72ca3fd51c158fe7db0ef2ed520486e19250d32f5976b97a3adfc6023cb2e2974c0876859c332db3982a1675913cb6a35ad12723ede19444f847d7d5a199e",
-        "dest-filename": "esbuild-0.11.12.tgz",
+        "url": "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.23.tgz#c42534f632e165120671d64db67883634333b4b8",
+        "sha512": "89a89967dbd4179c0957ca1bd6d97ee5a253af00dcce5bc63f42683269e90b6074a6988c0aef27f209b2e594c69796dc1b4f355c1567f94fa33fe98f166e53e5",
+        "dest-filename": "esbuild-0.11.23.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -12885,13 +12892,6 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/vscode-emmet-helper/-/vscode-emmet-helper-2.6.4.tgz#bea47f17649bba26b412f3d1fac18aaee43eba25",
-        "sha512": "7cfd27ba75b54545842867f882a8982ce54d1451974911e30a5d298a4c6dc02165b72f16c2298cf91049e68d1a222c1eaeb603df41ea79a572bc35b4dbb4ac7a",
-        "dest-filename": "vscode-emmet-helper-2.6.4.tgz",
-        "dest": "flatpak-node/yarn-mirror"
-    },
-    {
-        "type": "file",
         "url": "https://registry.yarnpkg.com/vscode-extension-telemetry/-/vscode-extension-telemetry-0.4.2.tgz#6ef847a80c9cfc207eb15e3a254f235acebb65a5",
         "sha512": "cb47f9d665681711c8cd42d03420b6e9304520a7440bbb9c912ded1682bef8e38e97c994d8b94ec6099b779d93fd25e85cd839688ef1aacfb8576ba0e484ef2b",
         "dest-filename": "vscode-extension-telemetry-0.4.2.tgz",
@@ -12951,6 +12951,13 @@
         "url": "https://registry.yarnpkg.com/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.1.tgz#178168e87efad6171b372add1dea34f53e5d330f",
         "sha512": "5087090e35fb20591c93b71290d372cc8cf9172be941f63bb1dcd5cbec2428dfc12da0f80d0d29a5742b29e3e8982c534bb46ba252b5234a5ecb46c6f5e87c74",
         "dest-filename": "vscode-languageserver-textdocument-1.0.1.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.2.tgz#2f9f6bd5b5eb3d8e21424c0c367009216f016236",
+        "sha512": "4fbb8f0b5f3e7fc99813895b559c1bdce4a6bf04d99b772e161addc7d067da5d75966a774af4ae4958f2d89b6fae08738c0a381ba4ebaa7cb69bd5c69c59d654",
+        "dest-filename": "vscode-languageserver-textdocument-1.0.2.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -13738,8 +13745,8 @@
         "type": "shell",
         "commands": [
             "mkdir -p \"bin\"",
-            "cp \".package/esbuild-linux-32@0.11.12/bin/esbuild\" \"bin/esbuild-linux-32@0.11.12\"",
-            "ln -sf \"esbuild-linux-32@0.11.12\" \"bin/esbuild-current\""
+            "cp \".package/esbuild-linux-32@0.11.23/bin/esbuild\" \"bin/esbuild-linux-32@0.11.23\"",
+            "ln -sf \"esbuild-linux-32@0.11.23\" \"bin/esbuild-current\""
         ],
         "dest": "flatpak-node/cache/esbuild",
         "only-arches": [
@@ -13762,8 +13769,8 @@
         "type": "shell",
         "commands": [
             "mkdir -p \"bin\"",
-            "cp \".package/esbuild-linux-64@0.11.12/bin/esbuild\" \"bin/esbuild-linux-64@0.11.12\"",
-            "ln -sf \"esbuild-linux-64@0.11.12\" \"bin/esbuild-current\""
+            "cp \".package/esbuild-linux-64@0.11.23/bin/esbuild\" \"bin/esbuild-linux-64@0.11.23\"",
+            "ln -sf \"esbuild-linux-64@0.11.23\" \"bin/esbuild-current\""
         ],
         "dest": "flatpak-node/cache/esbuild",
         "only-arches": [
@@ -13786,8 +13793,8 @@
         "type": "shell",
         "commands": [
             "mkdir -p \"bin\"",
-            "cp \".package/esbuild-linux-arm64@0.11.12/bin/esbuild\" \"bin/esbuild-linux-arm64@0.11.12\"",
-            "ln -sf \"esbuild-linux-arm64@0.11.12\" \"bin/esbuild-current\""
+            "cp \".package/esbuild-linux-arm64@0.11.23/bin/esbuild\" \"bin/esbuild-linux-arm64@0.11.23\"",
+            "ln -sf \"esbuild-linux-arm64@0.11.23\" \"bin/esbuild-current\""
         ],
         "dest": "flatpak-node/cache/esbuild",
         "only-arches": [
@@ -13810,8 +13817,8 @@
         "type": "shell",
         "commands": [
             "mkdir -p \"bin\"",
-            "cp \".package/esbuild-linux-arm@0.11.12/bin/esbuild\" \"bin/esbuild-linux-arm@0.11.12\"",
-            "ln -sf \"esbuild-linux-arm@0.11.12\" \"bin/esbuild-current\""
+            "cp \".package/esbuild-linux-arm@0.11.23/bin/esbuild\" \"bin/esbuild-linux-arm@0.11.23\"",
+            "ln -sf \"esbuild-linux-arm@0.11.23\" \"bin/esbuild-current\""
         ],
         "dest": "flatpak-node/cache/esbuild",
         "only-arches": [
