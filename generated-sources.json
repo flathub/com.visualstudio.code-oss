@@ -1,6 +1,20 @@
 [
     {
         "type": "archive",
+        "url": "http://nodejs.org/dist/v14.16.0/node-v14.16.0-headers.tar.gz",
+        "strip-components": 1,
+        "sha256": "4b44b92903a61c29af20550f9d25bfc3029657df6b5f0a12072a70360f7eedee",
+        "dest": "flatpak-node/cache/node-gyp/14.16.0"
+    },
+    {
+        "type": "archive",
+        "url": "https://electronjs.org/headers/v13.5.2/node-v13.5.2-headers.tar.gz",
+        "strip-components": 1,
+        "sha256": "33d73e24d9ae4d6985323ae7f560bf8b107c1be13c2a3c4b766420fda7bdecc2",
+        "dest": "flatpak-node/cache/node-gyp/13.5.2"
+    },
+    {
+        "type": "archive",
         "url": "https://playwright.azureedge.net/builds/chromium/920619/chromium-linux.zip",
         "strip-components": 0,
         "sha256": "44d970fb8871deb7aa29acbce6f747f07d1c1a1fb0289c18ce818fff892f7471",
@@ -122,6 +136,18 @@
     },
     {
         "type": "file",
+        "url": "data:9",
+        "dest-filename": "installVersion",
+        "dest": "flatpak-node/cache/node-gyp/13.5.2"
+    },
+    {
+        "type": "file",
+        "url": "data:9",
+        "dest-filename": "installVersion",
+        "dest": "flatpak-node/cache/node-gyp/14.16.0"
+    },
+    {
+        "type": "file",
         "url": "data:flatpak-node-cache",
         "dest-filename": "INSTALLATION_COMPLETE",
         "dest": "flatpak-node/cache/ms-playwright/chromium-920619"
@@ -233,6 +259,93 @@
         "url": "https://github.com/electron/electron/releases/download/v13.5.1/ffmpeg-v13.5.1-linux-x64.zip",
         "sha256": "2767ca52c8c9a018fdfca085ce85ef70e6bdd96b376082bbdb3e951d5cc481b0",
         "dest-filename": "ffmpeg-v13.5.1-linux-x64.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/SHASUMS256.txt",
+        "sha256": "9469a2172ec670046f4bb79da8bf5ab54f283fc9ed8ed0e4aa6415c84dd3b260",
+        "dest-filename": "SHASUMS256.txt-13.5.2",
+        "dest": "flatpak-node/cache/electron"
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/electron-v13.5.2-linux-arm64.zip",
+        "sha256": "6d89c41e53d8c14ae4a4b7f2f9d7b477055decad3074675e4cef745967829688",
+        "dest-filename": "electron-v13.5.2-linux-arm64.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/electron-v13.5.2-linux-armv7l.zip",
+        "sha256": "f325d48761ec222a2f9bbf0d0a3b995959266314b8375d4d6bb8e014bddd3a06",
+        "dest-filename": "electron-v13.5.2-linux-armv7l.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/electron-v13.5.2-linux-ia32.zip",
+        "sha256": "62d8766c1c921a95b24e2128bcee66e2e832491715df51554d9a12a16087d35c",
+        "dest-filename": "electron-v13.5.2-linux-ia32.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/electron-v13.5.2-linux-x64.zip",
+        "sha256": "6f9b9ad08f74ea8a2c214a7bafbc5b08e316674ff964b91a93f575e499d00464",
+        "dest-filename": "electron-v13.5.2-linux-x64.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/ffmpeg-v13.5.2-linux-arm64.zip",
+        "sha256": "ff13943ac7a5dd28b6f35cf965f0fb9dd852ad8da3c1043ee9054322f70a4d03",
+        "dest-filename": "ffmpeg-v13.5.2-linux-arm64.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/ffmpeg-v13.5.2-linux-armv7l.zip",
+        "sha256": "44d61095d3f0f2ab57a5ffe588781f88f3b2be8b2d4b8c279e2ceb4be5456a09",
+        "dest-filename": "ffmpeg-v13.5.2-linux-armv7l.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/ffmpeg-v13.5.2-linux-ia32.zip",
+        "sha256": "434a06d17b31c565bfc8eacf45261821285389430d23d836b89a10d0fe330f25",
+        "dest-filename": "ffmpeg-v13.5.2-linux-ia32.zip",
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "file",
+        "url": "https://github.com/electron/electron/releases/download/v13.5.2/ffmpeg-v13.5.2-linux-x64.zip",
+        "sha256": "2767ca52c8c9a018fdfca085ce85ef70e6bdd96b376082bbdb3e951d5cc481b0",
+        "dest-filename": "ffmpeg-v13.5.2-linux-x64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
@@ -13998,6 +14111,110 @@
             "ln -s \"../ffmpeg-v13.5.1-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.1ffmpeg-v13.5.1-linux-x64.zip/ffmpeg-v13.5.1-linux-x64.zip\"",
             "mkdir -p \"45e514af6b151aaaeab35606f3c066f7b573069d8bb7c8b3f337a3cf80c44977\"",
             "ln -s \"../ffmpeg-v13.5.1-linux-x64.zip\" \"45e514af6b151aaaeab35606f3c066f7b573069d8bb7c8b3f337a3cf80c44977/ffmpeg-v13.5.1-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-arm64.zip\"",
+            "ln -s \"../electron-v13.5.2-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-arm64.zip/electron-v13.5.2-linux-arm64.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../electron-v13.5.2-linux-arm64.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/electron-v13.5.2-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-armv7l.zip\"",
+            "ln -s \"../electron-v13.5.2-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-armv7l.zip/electron-v13.5.2-linux-armv7l.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../electron-v13.5.2-linux-armv7l.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/electron-v13.5.2-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-ia32.zip\"",
+            "ln -s \"../electron-v13.5.2-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-ia32.zip/electron-v13.5.2-linux-ia32.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../electron-v13.5.2-linux-ia32.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/electron-v13.5.2-linux-ia32.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-x64.zip\"",
+            "ln -s \"../electron-v13.5.2-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2electron-v13.5.2-linux-x64.zip/electron-v13.5.2-linux-x64.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../electron-v13.5.2-linux-x64.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/electron-v13.5.2-linux-x64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "x86_64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-arm64.zip\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-arm64.zip/ffmpeg-v13.5.2-linux-arm64.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-arm64.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/ffmpeg-v13.5.2-linux-arm64.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "aarch64"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-armv7l.zip\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-armv7l.zip/ffmpeg-v13.5.2-linux-armv7l.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-armv7l.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/ffmpeg-v13.5.2-linux-armv7l.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "arm"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-ia32.zip\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-ia32.zip/ffmpeg-v13.5.2-linux-ia32.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-ia32.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/ffmpeg-v13.5.2-linux-ia32.zip\""
+        ],
+        "dest": "flatpak-node/cache/electron",
+        "only-arches": [
+            "i386"
+        ]
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-x64.zip\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv13.5.2ffmpeg-v13.5.2-linux-x64.zip/ffmpeg-v13.5.2-linux-x64.zip\"",
+            "mkdir -p \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5\"",
+            "ln -s \"../ffmpeg-v13.5.2-linux-x64.zip\" \"957ae2c5c94d03a20385e5de1385684934a59afe6300302b8874a9c81f4109a5/ffmpeg-v13.5.2-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
