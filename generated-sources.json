@@ -13089,9 +13089,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/vscode-json-languageservice/-/vscode-json-languageservice-4.1.9.tgz#fb48edc69e37167c3cafd447c3fa898052d87b61",
-        "sha512": "9313478ad532d9f0b198feaf029d1244bad44ae79c518cf3c650bef39702de32651475a6bed0893b38a40be91c52721d96cf5f41207c9f4c87b3c4a5ead6b127",
-        "dest-filename": "vscode-json-languageservice-4.1.9.tgz",
+        "url": "https://registry.yarnpkg.com/vscode-json-languageservice/-/vscode-json-languageservice-4.1.10.tgz#5d5729fc4f3e02f41599e0104523a1877c25f0fb",
+        "sha512": "207962304118498d2d26326dd0409bf044b1fe7457a68cbd90de3659541781aa86ca2cc501fde389b4a27b30d04ebad8edfde4cb05e080253e92424433e38b65",
+        "dest-filename": "vscode-json-languageservice-4.1.10.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
