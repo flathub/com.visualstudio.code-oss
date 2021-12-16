@@ -12636,9 +12636,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998",
-        "sha512": "e4194ca1ff47d721add0ff3f585fb03cdc3a19f72d8068d7a798646e5a724fef2b9004929a450a317af14745e0f138550a2fc99c7422297781684c02790c0c17",
-        "dest-filename": "typescript-4.5.2.tgz",
+        "url": "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8",
+        "sha512": "56062cd80d90211b86a61b73155eda40976e2768327d39639e02f38e97d6f45a18645eb1bb0d56d2f5bd82108a2df716ac21712bcd42486440bd2d699f87c852",
+        "dest-filename": "typescript-4.5.4.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
