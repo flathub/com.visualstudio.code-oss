@@ -115,8 +115,11 @@ modules:
           - patches/0001-linux-restore-no-sandbox-for-startup-scripts.patch
         dest: main
 
-      - type: file
-        path: yarnrc
+      - type: inline
+        contents: |
+          yarn-offline-mirror /run/build/vscode/flatpak-node/yarn-mirror
+          --install.offline true
+          --run.offline true
         dest-filename: .yarnrc
 
       - generated-sources.json
