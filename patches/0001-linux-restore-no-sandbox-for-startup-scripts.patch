@@ -1,4 +1,4 @@
-From 17e842c2c1a5baa504c4a6f66e17f96218b23638 Mon Sep 17 00:00:00 2001
+From b63cf967abe9e3130f503d6dfa4f820afcb89e35 Mon Sep 17 00:00:00 2001
 From: Benjamin Pasero <benjamin.pasero@microsoft.com>
 Date: Fri, 11 Jun 2021 11:43:54 +0200
 Subject: [PATCH] linux - restore `--no-sandbox` for startup scripts
@@ -23,7 +23,7 @@ index 7106e0e0969..b85525fbd04 100644
  Type=Application
  NoDisplay=true
 diff --git a/resources/linux/code.desktop b/resources/linux/code.desktop
-index ab3b79a011b..62d6bfc47b4 100755
+index 72488b67700..8fc89dd15f3 100755
 --- a/resources/linux/code.desktop
 +++ b/resources/linux/code.desktop
 @@ -2,7 +2,7 @@
@@ -43,19 +43,19 @@ index ab3b79a011b..62d6bfc47b4 100755
 +Exec=@@EXEC@@ --no-sandbox --new-window %F
  Icon=@@ICON@@
 diff --git a/src/vs/code/node/cli.ts b/src/vs/code/node/cli.ts
-index c9235cf463c..03a561da973 100644
+index 8aac55005d4..e90d613cb25 100644
 --- a/src/vs/code/node/cli.ts
 +++ b/src/vs/code/node/cli.ts
 @@ -9,7 +9,7 @@ import { homedir, release, tmpdir } from 'os';
  import type { ProfilingSession, Target } from 'v8-inspect-profiler';
  import { Event } from 'vs/base/common/event';
- import { isAbsolute, join, resolve } from 'vs/base/common/path';
+ import { isAbsolute, resolve } from 'vs/base/common/path';
 -import { IProcessEnvironment, isMacintosh, isWindows } from 'vs/base/common/platform';
 +import { IProcessEnvironment, isMacintosh, isWindows, isLinux } from 'vs/base/common/platform';
  import { randomPort } from 'vs/base/common/ports';
  import { isString } from 'vs/base/common/types';
  import { whenDeleted, writeFileSync } from 'vs/base/node/pfs';
-@@ -364,6 +364,10 @@ export async function main(argv: string[]): Promise<any> {
+@@ -362,6 +362,10 @@ export async function main(argv: string[]): Promise<any> {
  			options['stdio'] = 'ignore';
  		}
  
@@ -67,5 +67,5 @@ index c9235cf463c..03a561da973 100644
  		if (!isMacOSBigSurOrNewer) {
  			// We spawn process.execPath directly
 -- 
-2.32.0
+2.34.1
 

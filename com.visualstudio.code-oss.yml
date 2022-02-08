@@ -96,8 +96,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.63.2
-        commit: 899d46d82c4c95423fb7e10e68eba52050e30ba3
+        tag: 1.64.0
+        commit: 5554b12acf27056905806867f251c859323ff7e9
         dest: main
         x-checker-data:
           type: json
@@ -115,8 +115,11 @@ modules:
           - patches/0001-linux-restore-no-sandbox-for-startup-scripts.patch
         dest: main
 
-      - type: file
-        path: yarnrc
+      - type: inline
+        contents: |
+          yarn-offline-mirror /run/build/vscode/flatpak-node/yarn-mirror
+          --install.offline true
+          --run.offline true
         dest-filename: .yarnrc
 
       - generated-sources.json
