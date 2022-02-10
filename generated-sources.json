@@ -15295,8 +15295,8 @@
     {
         "type": "git",
         "url": "https://github.com/mjbvz/markdown-it-katex.git",
-        "commit": "820d9025ad84937eb3f9f7efbc1be7595e20b19f",
-        "dest": "flatpak-node/tmp/markdown-it-katex.git-820d9025ad84937eb3f9f7efbc1be7595e20b19f"
+        "commit": "b1ed14de467031f5d4f9c1588dd1868cab0b8744",
+        "dest": "flatpak-node/tmp/markdown-it-katex.git-b1ed14de467031f5d4f9c1588dd1868cab0b8744"
     },
     {
         "type": "inline",
@@ -15355,7 +15355,7 @@
     {
         "type": "shell",
         "commands": [
-            "cd flatpak-node/tmp/markdown-it-katex.git-820d9025ad84937eb3f9f7efbc1be7595e20b19f; git archive --format tar -o ../../yarn-mirror/markdown-it-katex.git-820d9025ad84937eb3f9f7efbc1be7595e20b19f HEAD",
+            "cd flatpak-node/tmp/markdown-it-katex.git-b1ed14de467031f5d4f9c1588dd1868cab0b8744; git archive --format tar -o ../../yarn-mirror/markdown-it-katex.git-b1ed14de467031f5d4f9c1588dd1868cab0b8744 HEAD",
             "bash flatpak-node/setup_sdk_node_headers.sh"
         ]
     },
