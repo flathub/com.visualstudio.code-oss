@@ -112,7 +112,6 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/ext-gallery-from-env.patch
           - patches/disable-vscode-server.patch
-          - patches/0001-linux-restore-no-sandbox-for-startup-scripts.patch
         dest: main
 
       - type: inline
@@ -127,17 +126,35 @@ modules:
       - type: file
         path: install-data.py
 
+  - name: zypak
+    sources:
+      - type: git
+        url: https://github.com/refi64/zypak.git
+        tag: v2022.03
+        commit: 8424c6bcf909ca2031ebc6537d324bb64772266e
+
   - name: wrapper
     buildsystem: meson
     config-opts:
-      - -Deditor_binary=/app/main/bin/code-oss
+      - -Deditor_binary=/app/main/code-oss
       - >-
         -Deditor_args=[
+        '/app/main/resources/app/out/cli.js',
+        '--ms-enable-electron-run-as-node',
         '--extensions-dir', '$XDG_DATA_HOME/vscode/extensions',
         '--disable-crash-reporter'
         ]
       - -Dprogram_name=code-oss
       - -Deditor_title=Visual Studio Code Open Source
+      - -Dzypak=enabled
+      - >-
+        -Denvs=[
+        "ELECTRON_RUN_AS_NODE=1"
+        ]
+      - >-
+        -Denvs_inner=[
+        "ZYPAK_SPAWN_LATEST_ON_REEXEC=0"
+        ]
     sources:
       - type: dir
         path: wrapper
