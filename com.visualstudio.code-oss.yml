@@ -110,7 +110,7 @@ modules:
       - type: patch
         paths:
           - patches/ipc-sockets-paths-flatpak.patch
-          - patches/ext-gallery-from-env.patch
+          - patches/vscodium-custom-gallery.patch
           - patches/disable-vscode-server.patch
         dest: main
 
