@@ -111,7 +111,6 @@ modules:
         paths:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/vscodium-custom-gallery.patch
-          - patches/disable-vscode-server.patch
         dest: main
 
       - type: inline
