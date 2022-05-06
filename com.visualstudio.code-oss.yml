@@ -45,6 +45,9 @@ modules:
       - type: archive
         url: https://github.com/python-pillow/Pillow/archive/7.1.2.tar.gz
         sha256: 0149ff56547ef4ea658c833d7fb5af687a25cccc7ca4de58486578406a4ede27
+        x-checker-data:
+          type: pypi
+          name: Pillow
 
   - name: vscode
     build-options:
@@ -131,6 +134,8 @@ modules:
         url: https://github.com/refi64/zypak.git
         tag: v2022.03
         commit: 8424c6bcf909ca2031ebc6537d324bb64772266e
+        x-checker-data:
+          type: git
 
   - name: wrapper
     buildsystem: meson
