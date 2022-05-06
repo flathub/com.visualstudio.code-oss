@@ -43,8 +43,8 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/python-pillow/Pillow/archive/7.1.2.tar.gz
-        sha256: 0149ff56547ef4ea658c833d7fb5af687a25cccc7ca4de58486578406a4ede27
+        url: https://files.pythonhosted.org/packages/4b/83/090146d7871d90a2643d469c319c1d014e41b315ab5cf0f8b4b6a764ef31/Pillow-9.1.0.tar.gz
+        sha256: f401ed2bbb155e1ade150ccc63db1a4f6c1909d3d378f7d1235a44e90d75fb97
         x-checker-data:
           type: pypi
           name: Pillow
@@ -132,8 +132,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak.git
-        tag: v2022.03
-        commit: 8424c6bcf909ca2031ebc6537d324bb64772266e
+        tag: v2022.04
+        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
         x-checker-data:
           type: git
 
