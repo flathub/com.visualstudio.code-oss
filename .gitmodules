@@ -4,3 +4,6 @@
 [submodule "wrapper"]
 	path = wrapper
 	url = https://github.com/flathub/ide-flatpak-wrapper.git
+[submodule "tools"]
+	path = tools
+	url = https://github.com/flatpak/flatpak-builder-tools.git
