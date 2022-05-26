@@ -1,0 +1,24 @@
+name: Update generated sources
+on: pull_request
+jobs:
+  update-generated-sources:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'flathubbot'
+    steps:
+      - name: Install dependencies
+        run: |
+          apt install -y \
+            python3-yaml \
+            jq
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          submodules: true
+
+      - name: Update generated sources
+        run: |
+          set -e
+          ./update-generated-sources.sh
+          git push
