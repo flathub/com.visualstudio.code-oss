@@ -1146,6 +1146,13 @@
     },
     {
         "type": "file",
+        "url": "https://registry.yarnpkg.com/@microsoft/1ds-core-js/-/1ds-core-js-3.2.4.tgz#fbffd3fbcc80b04ba57c961486ff581c59e1180e",
+        "sha512": "6646c26fadc917b84df9843c7bfe2745eeaf00804ca6817c3d03626225d2cd8b5d85767fa4cde307dffb8343b92d1e21ff6214d5a980ab49290603db77a356aa",
+        "dest-filename": "@microsoft-1ds-core-js-3.2.4.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
         "url": "https://registry.yarnpkg.com/@microsoft/1ds-post-js/-/1ds-post-js-3.2.2.tgz#cbe5f8c1d1281c7177448ca3a48f16d4d4bdeed7",
         "sha512": "3d7b3ed577c0da544d80b42af30df1efcea13cb4e74fa9b9f7d44e5028e0b60e7053bc4e75f5c52e9570fb93a477d243f35661638c575eebd5bed1aed7f8f5b2",
         "dest-filename": "@microsoft-1ds-post-js-3.2.2.tgz",
@@ -1156,6 +1163,13 @@
         "url": "https://registry.yarnpkg.com/@microsoft/1ds-post-js/-/1ds-post-js-3.2.3.tgz#1fa7d51615a44f289632ae8c588007ba943db216",
         "sha512": "b5c1894175ebd8b62805b2173e85157b52821773ad06cb8a0c52fb0577e636db921ad585d327a39ba1fcdc3ad1f3f7142063113143fd96a365a851b00d88b001",
         "dest-filename": "@microsoft-1ds-post-js-3.2.3.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/@microsoft/1ds-post-js/-/1ds-post-js-3.2.4.tgz#38913faa3fbaca320cea14d275f7cd4c28242d35",
+        "sha512": "49b96118d91df02ea4cdec2af8673f562376a18a75fd3245c34638ace7c75c2afab22ce7227060826e5e86a65dfd03d787fecc62a0b1e06a70f51adad7c7ced2",
+        "dest-filename": "@microsoft-1ds-post-js-3.2.4.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -1191,6 +1205,13 @@
         "url": "https://registry.yarnpkg.com/@microsoft/applicationinsights-core-js/-/applicationinsights-core-js-2.8.4.tgz#607e531bb241a8920d43960f68a7c76a6f9af596",
         "sha512": "16803414d3ac15b2672f24f242562cebe1d1ec73046ba9c0384e963a6f5655e8c11cc1d0fc175bfa17d5162eac971c028a6aff9deafdd237218b8fec218767c9",
         "dest-filename": "@microsoft-applicationinsights-core-js-2.8.4.tgz",
+        "dest": "flatpak-node/yarn-mirror"
+    },
+    {
+        "type": "file",
+        "url": "https://registry.yarnpkg.com/@microsoft/applicationinsights-core-js/-/applicationinsights-core-js-2.8.5.tgz#02adb1b9a7dca83897a9a06a98d1aecdc7526b6f",
+        "sha512": "eff1202baafc1a20d596ea3ce2c90230db618273dae8fed35e226a1c125bb827f5d4de18aa46681a32acf85a3b87a5c83ee60c50754c34ba4139b23ba12ec7b1",
+        "dest-filename": "@microsoft-applicationinsights-core-js-2.8.5.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -2679,16 +2700,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/@vscode/extension-telemetry/-/extension-telemetry-0.5.1.tgz#20150976629663b3d33799a4ad25944a1535f7db",
-        "sha512": "72f16af1daf174b445f0a37bd96715e254c46bd1aa0e2470cbd11b9d8ba84820fd25d93ccc7145e3d3260020b5aace11f4aa3f0b5b8c3a678b266562f04034ad",
-        "dest-filename": "@vscode-extension-telemetry-0.5.1.tgz",
-        "dest": "flatpak-node/yarn-mirror"
-    },
-    {
-        "type": "file",
-        "url": "https://registry.yarnpkg.com/@vscode/extension-telemetry/-/extension-telemetry-0.6.1.tgz#f8d1f7145baf932b75077c48107edff48501fc14",
-        "sha512": "63839cf32194446545e1684265cbbe115cbe30021e4032c355e0e52e7e7d1f40b5c3eef1afc74bd99b43062a32f87a20d4476b77accec2bdcd6bbc5ed620bf50",
-        "dest-filename": "@vscode-extension-telemetry-0.6.1.tgz",
+        "url": "https://registry.yarnpkg.com/@vscode/extension-telemetry/-/extension-telemetry-0.6.2.tgz#b86814ee680615730da94220c2b03ea9c3c14a8e",
+        "sha512": "c9bff0c4bb9a68245c04066d0c28cd6128ac017cf7156b12a8085ae67847718c71d993dd41d5ae66a55718aab46691d59dd0565ad2ba5eab6908ddbf1c1e12d7",
+        "dest-filename": "@vscode-extension-telemetry-0.6.2.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
