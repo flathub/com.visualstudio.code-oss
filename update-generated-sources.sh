@@ -37,11 +37,15 @@ done < <(
     <<<"$MODULE_OBJ"
 )
 
-"$TOOLS_DIR/node/flatpak-node-generator.py" \
-    --xdg-layout \
+if [ -z "${PYTHONPATH}" ]; then
+    export PYTHONPATH="$TOOLS_DIR/node"
+else
+    export PYTHONPATH="$TOOLS_DIR/node:${PYTHONPATH}"
+fi
+
+python3 -m flatpak_node_generator \
     --electron-node-headers \
     --electron-ffmpeg=archive \
-    --electron-from-rcfile \
     --recursive \
     --output "$MANIFEST_DIR/$GENERATED_SOURCES" \
     yarn "$CLONE_DIR/yarn.lock"
