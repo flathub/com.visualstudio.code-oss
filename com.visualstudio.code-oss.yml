@@ -67,20 +67,16 @@ modules:
       - |
         set -e
         mv product.json product.orig.json
-        jq '
+        jq \
+        --argfile vscodium_product ../vscodium/product.json \
+        '
           .quality="'"${VSCODE_QUALITY}"'" |
           .commit="'"$(git rev-parse HEAD)"'" |
           .date="'"$(date -u +'%FT%TZ')"'" |
           .extensionsGallery.serviceUrl="https://open-vsx.org/vscode/gallery" |
           .extensionsGallery.itemUrl="https://open-vsx.org/vscode/item" |
           .linkProtectionTrustedDomains=["https://open-vsx.org"] |
-          .extensionAllowedProposedApi+=[
-            "GitHub.vscode-pull-request-github",
-            "ms-python.python",
-            "ms-toolsai.jupyter",
-            "ms-vscode.js-debug",
-            "ms-vsliveshare.vsliveshare"
-          ] |
+          .extensionEnabledApiProposals=$vscodium_product["extensionEnabledApiProposals"] |
           .builtInExtensions=[]
         ' < product.orig.json > product.json
         rm product.orig.json
@@ -113,6 +109,11 @@ modules:
           - patches/ipc-sockets-paths-flatpak.patch
           - patches/vscodium-custom-gallery.patch
         dest: main
+
+      - type: file
+        url: https://github.com/VSCodium/vscodium/raw/1.70.0/product.json
+        sha256: e0d76771e88a80eaa18cadbdb42479f8844987eb2d5d0d6fd7eac021f7a2aa88
+        dest: vscodium
 
       - type: inline
         contents: |
