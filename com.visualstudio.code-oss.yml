@@ -11,6 +11,7 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --socket=ssh-auth
+  - --talk-name=org.freedesktop.secrets # doesn't work well with secrets portal
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.Flatpak
   - --filesystem=host
