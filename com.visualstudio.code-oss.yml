@@ -115,6 +115,13 @@ modules:
         url: https://github.com/VSCodium/vscodium/raw/1.70.0/product.json
         sha256: e0d76771e88a80eaa18cadbdb42479f8844987eb2d5d0d6fd7eac021f7a2aa88
         dest: vscodium
+        x-checker-data:
+          type: json
+          parent-id: vscode-git-0
+          version-data-url: >-
+            "https://api.github.com/repos/VSCodium/vscodium/git/refs/tags/\($parent.new.tag//$parent.current.tag)"
+          version-query: last | .ref | sub("^refs/tags/"; "")
+          url-query: '"https://github.com/VSCodium/vscodium/raw/\($version)/product.json"'
 
       - type: inline
         contents: |
