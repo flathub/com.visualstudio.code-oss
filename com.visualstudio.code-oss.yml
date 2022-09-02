@@ -112,7 +112,7 @@ modules:
         dest: main
 
       - type: file
-        url: https://github.com/VSCodium/vscodium/raw/1.70.2.22230/product.json
+        url: https://github.com/VSCodium/vscodium/raw/1.71.0.22245/product.json
         sha256: 19add10fc714f8f4883fc931f6bcb915fe0f41bced7a8ad98e76f39b2aa459ba
         dest: vscodium
         x-checker-data:
