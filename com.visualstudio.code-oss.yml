@@ -94,8 +94,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.71.2
-        commit: 74b1f979648cc44d385a2286793c226e611f59e7
+        tag: 1.72.0
+        commit: 64bbfbf67ada9953918d72e1df2f4d8e537d340e
         dest: main
         x-checker-data:
           type: json
