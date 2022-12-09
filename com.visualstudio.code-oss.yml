@@ -57,6 +57,8 @@ modules:
         XDG_CACHE_HOME: /run/build/vscode/flatpak-node/cache
         DEBUG: electron-rebuild,electron-builder
         VSCODE_QUALITY: stable
+        # NOTE Looks like node builds with openssl3 won't work without this option
+        NODE_OPTIONS: --openssl-legacy-provider
       arch:
         arm: {env: {earch: armv7l, suffix: -armv7l}}
         aarch64: {env: {earch: arm64, suffix: -arm64}}
