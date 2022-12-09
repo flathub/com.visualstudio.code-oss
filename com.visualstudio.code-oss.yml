@@ -1,7 +1,7 @@
 id: com.visualstudio.code-oss
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Sdk
-runtime-version: '21.08'
+runtime-version: '22.08'
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -28,7 +28,7 @@ add-extensions:
   com.visualstudio.code.tool:
     directory: tools
     subdirectories: true
-    version: '21.08'
+    version: '22.08'
     add-ld-path: lib
     no-autodownload: true
 modules:
@@ -57,6 +57,8 @@ modules:
         XDG_CACHE_HOME: /run/build/vscode/flatpak-node/cache
         DEBUG: electron-rebuild,electron-builder
         VSCODE_QUALITY: stable
+        # NOTE Looks like node builds with openssl3 won't work without this option
+        NODE_OPTIONS: --openssl-legacy-provider
       arch:
         arm: {env: {earch: armv7l, suffix: -armv7l}}
         aarch64: {env: {earch: arm64, suffix: -arm64}}
