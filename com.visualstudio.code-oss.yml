@@ -96,8 +96,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.74.3
-        commit: 97dec172d3256f8ca4bfb2143f3f76b503ca0534
+        tag: 1.75.1
+        commit: 441438abd1ac652551dbe4d408dfcec8a499b8bf
         dest: main
         x-checker-data:
           type: json
@@ -114,8 +114,8 @@ modules:
         dest: main
 
       - type: file
-        url: https://github.com/VSCodium/vscodium/raw/1.74.3.23010/product.json
-        sha256: 1dec09142eeb4116c1dc6ab70feb364bd315d22c6099eb94badcd711c9b59257
+        url: https://github.com/VSCodium/vscodium/raw/1.75.1.23040/product.json
+        sha256: f70be5ee5e2267d82dca5a1e866d4e5e1abcca8e3dec0abab6cc847a5f0dd13e
         dest: vscodium
         x-checker-data:
           type: json
