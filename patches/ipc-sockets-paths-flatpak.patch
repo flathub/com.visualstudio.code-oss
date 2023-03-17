@@ -1,8 +1,8 @@
 diff --git a/extensions/git/src/ipc/ipcServer.ts b/extensions/git/src/ipc/ipcServer.ts
-index 5cea9faf98f..0e4271162bc 100644
+index c9de357b1a6..f8830e1d5ac 100644
 --- a/extensions/git/src/ipc/ipcServer.ts
 +++ b/extensions/git/src/ipc/ipcServer.ts
-@@ -16,8 +16,14 @@ function getIPCHandlePath(id: string): string {
+@@ -17,8 +17,14 @@ function getIPCHandlePath(id: string): string {
  		return `\\\\.\\pipe\\vscode-git-${id}-sock`;
  	}
  
@@ -20,10 +20,10 @@ index 5cea9faf98f..0e4271162bc 100644
  
  	return path.join(os.tmpdir(), `vscode-git-${id}.sock`);
 diff --git a/src/vs/base/parts/ipc/node/ipc.net.ts b/src/vs/base/parts/ipc/node/ipc.net.ts
-index ae2d2a60c4c..54f68436ece 100644
+index 80873b97c1f..f62589712fc 100644
 --- a/src/vs/base/parts/ipc/node/ipc.net.ts
 +++ b/src/vs/base/parts/ipc/node/ipc.net.ts
-@@ -477,6 +477,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
+@@ -764,6 +764,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
  	[Platform.Mac]: 103
  };
  
@@ -43,21 +43,21 @@ index ae2d2a60c4c..54f68436ece 100644
  export function createRandomIPCHandle(): string {
  	const randomSuffix = generateUuid();
  
-@@ -489,7 +502,7 @@ export function createRandomIPCHandle(): string {
+@@ -776,7 +789,7 @@ export function createRandomIPCHandle(): string {
  	// XDG_RUNTIME_DIR over tmpDir
  	let result: string;
  	if (XDG_RUNTIME_DIR) {
 -		result = join(XDG_RUNTIME_DIR, `vscode-ipc-${randomSuffix}.sock`);
 +		result = getXdgSocketPath(`vscode-ipc-${randomSuffix}.sock`);
  	} else {
- 		result = join(tmpdir(), `vscode-ipc-${randomSuffix}.sock`);
+ 		result = join(getNodeDependencies().os.tmpdir(), `vscode-ipc-${randomSuffix}.sock`);
  	}
-@@ -513,7 +526,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
- 	// unless portable
+@@ -809,7 +822,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
+ 
  	let result: string;
  	if (XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {
--		result = join(XDG_RUNTIME_DIR, `vscode-${scope.substr(0, 8)}-${version}-${type}.sock`);
-+		result = getXdgSocketPath(`vscode-${scope.substr(0, 8)}-${version}-${type}.sock`);
+-		result = join(XDG_RUNTIME_DIR, `vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
++		result = getXdgSocketPath(`vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
  	} else {
- 		result = join(directoryPath, `${version}-${type}.sock`);
+ 		result = join(directoryPath, `${versionForSocket}-${typeForSocket}.sock`);
  	}
