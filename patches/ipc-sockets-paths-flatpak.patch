@@ -1,63 +1,59 @@
 diff --git a/extensions/git/src/ipc/ipcServer.ts b/extensions/git/src/ipc/ipcServer.ts
-index 5cea9faf98f..0e4271162bc 100644
+index 8481aa4a35d..56f41a56165 100644
 --- a/extensions/git/src/ipc/ipcServer.ts
 +++ b/extensions/git/src/ipc/ipcServer.ts
-@@ -16,8 +16,14 @@ function getIPCHandlePath(id: string): string {
- 		return `\\\\.\\pipe\\vscode-git-${id}-sock`;
+@@ -18,7 +18,11 @@ function getIPCHandlePath(id: string): string {
  	}
  
--	if (process.env['XDG_RUNTIME_DIR']) {
+ 	if (process.platform !== 'darwin' && process.env['XDG_RUNTIME_DIR']) {
 -		return path.join(process.env['XDG_RUNTIME_DIR'] as string, `vscode-git-${id}.sock`);
-+	const xdgRuntimeDir = process.env['XDG_RUNTIME_DIR'];
-+	if (xdgRuntimeDir) {
-+		const flatpakID = process.env['FLATPAK_ID'];
-+		if (flatpakID) {
-+			return path.join(xdgRuntimeDir, 'app', flatpakID, `vscode-git-${id}.sock`);
++		if (process.env['FLATPAK_ID']) {
++			return path.join(process.env['XDG_RUNTIME_DIR'], 'app', process.env['FLATPAK_ID'], `vscode-git-${id}.sock`);
 +		} else {
-+			return path.join(xdgRuntimeDir, `vscode-git-${id}.sock`);
++			return path.join(process.env['XDG_RUNTIME_DIR'], `vscode-git-${id}.sock`);
 +		}
  	}
  
  	return path.join(os.tmpdir(), `vscode-git-${id}.sock`);
 diff --git a/src/vs/base/parts/ipc/node/ipc.net.ts b/src/vs/base/parts/ipc/node/ipc.net.ts
-index ae2d2a60c4c..54f68436ece 100644
+index ed30467961b..87cd66fcf73 100644
 --- a/src/vs/base/parts/ipc/node/ipc.net.ts
 +++ b/src/vs/base/parts/ipc/node/ipc.net.ts
-@@ -477,6 +477,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
+@@ -753,6 +753,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
  	[Platform.Mac]: 103
  };
  
-+export function getXdgSocketPath(socketName: string): string {
++export function getXdgSocketDir(): string {
 +	if (XDG_RUNTIME_DIR) {
 +		const flatpakID = process.env['FLATPAK_ID'];
 +		if (flatpakID) {
-+			return join(XDG_RUNTIME_DIR, 'app', flatpakID, socketName);
++			return join(XDG_RUNTIME_DIR, 'app', flatpakID);
 +		} else {
-+			return join(XDG_RUNTIME_DIR, socketName);
++			return XDG_RUNTIME_DIR;
 +		}
 +	} else {
-+		return join('/run', 'user', process.getuid().toString(), socketName);
++		return join('/run', 'user', process.getuid().toString());
 +	}
 +}
 +
  export function createRandomIPCHandle(): string {
  	const randomSuffix = generateUuid();
  
-@@ -489,7 +502,7 @@ export function createRandomIPCHandle(): string {
- 	// XDG_RUNTIME_DIR over tmpDir
+@@ -763,7 +776,7 @@ export function createRandomIPCHandle(): string {
+ 
+ 	// Mac & Unix: Use socket file
+ 	// Unix: Prefer XDG_RUNTIME_DIR over user data path
+-	const basePath = process.platform !== 'darwin' && XDG_RUNTIME_DIR ? XDG_RUNTIME_DIR : tmpdir();
++	const basePath = process.platform !== 'darwin' && XDG_RUNTIME_DIR ? getXdgSocketDir() : tmpdir();
+ 	const result = join(basePath, `vscode-ipc-${randomSuffix}.sock`);
+ 
+ 	// Validate length
+@@ -791,7 +804,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
+ 
  	let result: string;
- 	if (XDG_RUNTIME_DIR) {
--		result = join(XDG_RUNTIME_DIR, `vscode-ipc-${randomSuffix}.sock`);
-+		result = getXdgSocketPath(`vscode-ipc-${randomSuffix}.sock`);
+ 	if (process.platform !== 'darwin' && XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {
+-		result = join(XDG_RUNTIME_DIR, `vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
++		result = join(getXdgSocketDir(), `vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
  	} else {
- 		result = join(tmpdir(), `vscode-ipc-${randomSuffix}.sock`);
- 	}
-@@ -513,7 +526,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
- 	// unless portable
- 	let result: string;
- 	if (XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {
--		result = join(XDG_RUNTIME_DIR, `vscode-${scope.substr(0, 8)}-${version}-${type}.sock`);
-+		result = getXdgSocketPath(`vscode-${scope.substr(0, 8)}-${version}-${type}.sock`);
- 	} else {
- 		result = join(directoryPath, `${version}-${type}.sock`);
+ 		result = join(directoryPath, `${versionForSocket}-${typeForSocket}.sock`);
  	}
