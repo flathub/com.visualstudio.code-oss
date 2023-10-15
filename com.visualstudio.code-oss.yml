@@ -44,8 +44,8 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/bc/07/830784e061fb94d67649f3e438ff63cfb902dec6d48ac75aeaaac7c7c30e/Pillow-9.4.0.tar.gz
-        sha256: a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e
+        url: https://files.pythonhosted.org/packages/80/d7/c4b258c9098b469c4a4e77b0a99b5f4fd21e359c2e486c977d231f52fc71/Pillow-10.1.0.tar.gz
+        sha256: e6bf8de6c36ed96c86ea3b6e1d5273c53f46ef518a062464cd7ef5dd2cf92e38
         x-checker-data:
           type: pypi
           name: Pillow
@@ -96,8 +96,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.74.3
-        commit: 97dec172d3256f8ca4bfb2143f3f76b503ca0534
+        tag: 1.83.1
+        commit: f1b07bd25dfad64b0167beb15359ae573aecd2cc
         dest: main
         x-checker-data:
           type: json
@@ -114,8 +114,8 @@ modules:
         dest: main
 
       - type: file
-        url: https://github.com/VSCodium/vscodium/raw/1.74.3.23010/product.json
-        sha256: 1dec09142eeb4116c1dc6ab70feb364bd315d22c6099eb94badcd711c9b59257
+        url: https://github.com/VSCodium/vscodium/raw/1.83.1.23285/product.json
+        sha256: 3783433f65e9fc97c23670a0c7af5ba27c1d6f0438ed0005d0af274b8e470f19
         dest: vscodium
         x-checker-data:
           type: json
