@@ -1,15 +1,13 @@
 diff --git a/extensions/git/src/ipc/ipcServer.ts b/extensions/git/src/ipc/ipcServer.ts
-index 5cea9faf98f..0e4271162bc 100644
+index 8481aa4a35d..33c869da7dd 100644
 --- a/extensions/git/src/ipc/ipcServer.ts
 +++ b/extensions/git/src/ipc/ipcServer.ts
-@@ -16,8 +16,14 @@ function getIPCHandlePath(id: string): string {
- 		return `\\\\.\\pipe\\vscode-git-${id}-sock`;
+@@ -18,7 +18,13 @@ function getIPCHandlePath(id: string): string {
  	}
  
--	if (process.env['XDG_RUNTIME_DIR']) {
+ 	if (process.platform !== 'darwin' && process.env['XDG_RUNTIME_DIR']) {
 -		return path.join(process.env['XDG_RUNTIME_DIR'] as string, `vscode-git-${id}.sock`);
-+	const xdgRuntimeDir = process.env['XDG_RUNTIME_DIR'];
-+	if (xdgRuntimeDir) {
++		const xdgRuntimeDir = process.env['XDG_RUNTIME_DIR'];
 +		const flatpakID = process.env['FLATPAK_ID'];
 +		if (flatpakID) {
 +			return path.join(xdgRuntimeDir, 'app', flatpakID, `vscode-git-${id}.sock`);
@@ -20,10 +18,10 @@ index 5cea9faf98f..0e4271162bc 100644
  
  	return path.join(os.tmpdir(), `vscode-git-${id}.sock`);
 diff --git a/src/vs/base/parts/ipc/node/ipc.net.ts b/src/vs/base/parts/ipc/node/ipc.net.ts
-index ae2d2a60c4c..54f68436ece 100644
+index e47b6c70b23..b20cbf042c6 100644
 --- a/src/vs/base/parts/ipc/node/ipc.net.ts
 +++ b/src/vs/base/parts/ipc/node/ipc.net.ts
-@@ -477,6 +477,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
+@@ -765,6 +765,19 @@ const safeIpcPathLengths: { [platform: number]: number } = {
  	[Platform.Mac]: 103
  };
  
@@ -43,21 +41,21 @@ index ae2d2a60c4c..54f68436ece 100644
  export function createRandomIPCHandle(): string {
  	const randomSuffix = generateUuid();
  
-@@ -489,7 +502,7 @@ export function createRandomIPCHandle(): string {
- 	// XDG_RUNTIME_DIR over tmpDir
+@@ -776,7 +789,7 @@ export function createRandomIPCHandle(): string {
+ 	// Mac & Unix: Use socket file
+ 	// Unix: Prefer XDG_RUNTIME_DIR over user data path
+ 	const basePath = process.platform !== 'darwin' && XDG_RUNTIME_DIR ? XDG_RUNTIME_DIR : tmpdir();
+-	const result = join(basePath, `vscode-ipc-${randomSuffix}.sock`);
++	const result = getXdgSocketPath(`vscode-ipc-${randomSuffix}.sock`);
+ 
+ 	// Validate length
+ 	validateIPCHandleLength(result);
+@@ -803,7 +816,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
+ 
  	let result: string;
- 	if (XDG_RUNTIME_DIR) {
--		result = join(XDG_RUNTIME_DIR, `vscode-ipc-${randomSuffix}.sock`);
-+		result = getXdgSocketPath(`vscode-ipc-${randomSuffix}.sock`);
+ 	if (process.platform !== 'darwin' && XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {
+-		result = join(XDG_RUNTIME_DIR, `vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
++		result = getXdgSocketPath(`vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
  	} else {
- 		result = join(tmpdir(), `vscode-ipc-${randomSuffix}.sock`);
- 	}
-@@ -513,7 +526,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
- 	// unless portable
- 	let result: string;
- 	if (XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {
--		result = join(XDG_RUNTIME_DIR, `vscode-${scope.substr(0, 8)}-${version}-${type}.sock`);
-+		result = getXdgSocketPath(`vscode-${scope.substr(0, 8)}-${version}-${type}.sock`);
- 	} else {
- 		result = join(directoryPath, `${version}-${type}.sock`);
+ 		result = join(directoryPath, `${versionForSocket}-${typeForSocket}.sock`);
  	}

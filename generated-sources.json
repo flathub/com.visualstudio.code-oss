@@ -131,7 +131,7 @@
     {
         "type": "file",
         "url": "https://codeload.github.com/mjbvz/markdown-it-katex/tar.gz/19f98f10f7d57f6e09049ddaced0da89b73423c5",
-        "sha256": "28d86ee8089db9e248054c4da736612752ddff2cbbe74f0bffb3ea6ce8f6ff17",
+        "sha256": "ca79342bc78df9a0cf60296e3e4977b7727292386bd2325004a46f2e08df7f81",
         "dest-filename": "19f98f10f7d57f6e09049ddaced0da89b73423c5",
         "dest": "flatpak-node/yarn-mirror"
     },
