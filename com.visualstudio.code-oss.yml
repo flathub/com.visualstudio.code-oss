@@ -71,7 +71,7 @@ modules:
         set -e
         mv product.json product.orig.json
         jq \
-        --argfile vscodium_product ../vscodium/product.json \
+        --slurpfile vscodium_product ../vscodium/product.json \
         '
           .quality="'"${VSCODE_QUALITY}"'" |
           .commit="'"$(git rev-parse HEAD)"'" |
