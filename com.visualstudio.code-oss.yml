@@ -44,8 +44,8 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/bc/07/830784e061fb94d67649f3e438ff63cfb902dec6d48ac75aeaaac7c7c30e/Pillow-9.4.0.tar.gz
-        sha256: a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e
+        url: https://files.pythonhosted.org/packages/ef/43/c50c17c5f7d438e836c169e343695534c38c77f60e7c90389bd77981bc21/pillow-10.3.0.tar.gz
+        sha256: 9d2455fbf44c914840c793e89aa82d0e1763a14253a000743719ae5946814b2d
         x-checker-data:
           type: pypi
           name: Pillow
@@ -96,8 +96,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.74.3
-        commit: 97dec172d3256f8ca4bfb2143f3f76b503ca0534
+        tag: 1.89.0
+        commit: 6319a0b6210a13408ab1ef44be93444143942ea8
         dest: main
         x-checker-data:
           type: json
@@ -141,8 +141,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak.git
-        tag: v2022.04
-        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
+        tag: v2024.01.17
+        commit: ded79a2f8a509adc21834b95a9892073d4a91fdc
         x-checker-data:
           type: git
 
