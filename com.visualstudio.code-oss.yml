@@ -44,8 +44,8 @@ modules:
       - '*'
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/bc/07/830784e061fb94d67649f3e438ff63cfb902dec6d48ac75aeaaac7c7c30e/Pillow-9.4.0.tar.gz
-        sha256: a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e
+        url: https://files.pythonhosted.org/packages/cd/74/ad3d526f3bf7b6d3f408b73fde271ec69dfac8b81341a318ce825f2b3812/pillow-10.4.0.tar.gz
+        sha256: 166c1cd4d24309b30d61f79f4a9114b7b2313d7450912277855ff5dfd7cd4a06
         x-checker-data:
           type: pypi
           name: Pillow
@@ -96,8 +96,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/microsoft/vscode.git
-        tag: 1.74.3
-        commit: 97dec172d3256f8ca4bfb2143f3f76b503ca0534
+        tag: 1.92.2
+        commit: fee1edb8d6d72a0ddff41e5f71a671c23ed924b9
         dest: main
         x-checker-data:
           type: json
@@ -114,8 +114,8 @@ modules:
         dest: main
 
       - type: file
-        url: https://github.com/VSCodium/vscodium/raw/1.74.3.23010/product.json
-        sha256: 1dec09142eeb4116c1dc6ab70feb364bd315d22c6099eb94badcd711c9b59257
+        url: https://github.com/VSCodium/vscodium/raw/1.92.2.24228/product.json
+        sha256: d909dd61d5ff06f07eb1181db53bad0a5e7d86c2f17249a152e8ee3ae170016d
         dest: vscodium
         x-checker-data:
           type: json
@@ -141,8 +141,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak.git
-        tag: v2022.04
-        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
+        tag: v2024.01.17
+        commit: ded79a2f8a509adc21834b95a9892073d4a91fdc
         x-checker-data:
           type: git
 
