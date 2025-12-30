@@ -1,4 +1,6 @@
 {
+    "end-of-life": "This application is no longer maintained. Please use com.vscodium.codium",
+    "end-of-life-rebase": "com.vscodium.codium",
     "disable-external-data-checker": true,
     "only-arches": [
         "x86_64",
